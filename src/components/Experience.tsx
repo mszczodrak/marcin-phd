@@ -90,8 +90,8 @@ const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
   },
   {
     id: "point3",
-    x: 550,
-    y: 140,
+    x: 500,
+    y: 150,
     companyName: "Essential",
     year: "2017",
     description:
@@ -103,8 +103,8 @@ const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
   },
   {
     id: "point4",
-    x: 500,
-    y: 150,
+    x: 550,
+    y: 140,
     companyName: "Google X",
     year: "2018",
     description:
@@ -153,154 +153,160 @@ const Experience = () => {
       id="experience"
       className="bg-zinc-900 text-text p-4 sm:p-8 md:p-20 relative w-screen overflow-x-hidden"
     >
-      <h2 className="text-2xl sm:text-3xl font-orbitron mb-2 text-white">
-        Experience
-      </h2>
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-orbitron mb-2 text-white">
+          Experience
+        </h2>
 
-      {/* R&D Experience Section */}
-      <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
-        <h3 className="text-lg sm:text-xl font-orbitron text-white mb-4">
-          Past Research & Development Experience
-        </h3>
+        {/* R&D Experience Section */}
+        <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
+          <h3 className="text-lg sm:text-xl font-orbitron text-white mb-4">
+            Past Research & Development Experience
+          </h3>
 
-        <div className="w-full aspect-[2/1] relative">
-          <svg
-            className="w-full h-full"
-            viewBox="0 0 900 400"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <defs>
-              <linearGradient
-                id="constructionGradient"
-                x1="0"
-                x2="0"
-                y1="0"
-                y2="1"
-              >
-                <stop offset="0%" stopColor="#FFB6C1" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="#FFB6C1" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient id="iotGradient" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0%" stopColor="#98FB98" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="#98FB98" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient id="roboticsGradient" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0%" stopColor="#87CEEB" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="#87CEEB" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-
-            <g
-              onMouseEnter={() => setHoveredSection("construction")}
-              onMouseLeave={() => setHoveredSection(null)}
+          <div className="w-full relative">
+            <svg
+              className="w-full h-full"
+              viewBox="0 0 900 550"
+              preserveAspectRatio="xMidYMid meet"
             >
-              {/* Construction path with fill */}
-              <path
-                className="construction-path-fill"
-                d="M 100,100 C 200,100 300,200 400,200 L 400,200 L 100,200 Z"
-                fill="url(#constructionGradient)"
-                stroke="none"
-              />
-              <path
-                className="construction-path-stroke"
-                d="M 100,100 C 200,100 300,200 400,200"
-                fill="none"
-                stroke="#FFB6C1"
-                strokeWidth="2"
-              />
-            </g>
+              <defs>
+                <linearGradient
+                  id="constructionGradient"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="1"
+                >
+                  <stop offset="0%" stopColor="#FFB6C1" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#FFB6C1" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="iotGradient" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="#98FB98" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#98FB98" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient
+                  id="roboticsGradient"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="1"
+                >
+                  <stop offset="0%" stopColor="#87CEEB" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#87CEEB" stopOpacity="0" />
+                </linearGradient>
+              </defs>
 
-            <text
-              x="150"
-              y="80"
-              fill="#FFB6C1"
-              className="font-orbitron text-lg"
-            >
-              Construction
-            </text>
-
-            <g
-              onMouseEnter={() => setHoveredSection("iot")}
-              onMouseLeave={() => setHoveredSection(null)}
-            >
-              {/* IoT path with fill */}
-              <path
-                className="iot-path-fill"
-                d="M 200,200 C 350,200 400,100 500,100 S 650,200 800,200 L 800,200 L 200,200 Z"
-                fill="url(#iotGradient)"
-                stroke="none"
-              />
-              <path
-                className="iot-path-stroke"
-                d="M 200,200 C 350,200 400,100 500,100 S 650,200 800,200"
-                fill="none"
-                stroke="#98FB98"
-                strokeWidth="2"
-              />
-            </g>
-            <text
-              x="490"
-              y="80"
-              fill="#98FB98"
-              className="font-orbitron text-lg"
-            >
-              IoT
-            </text>
-
-            <g
-              onMouseEnter={() => setHoveredSection("robotics")}
-              onMouseLeave={() => setHoveredSection(null)}
-            >
-              {/* Robotics path with fill */}
-              <path
-                className="robotics-path-fill"
-                d="M 600,200 C 700,200 800,100 900,100 L 900,200 L 600,200 Z"
-                fill="url(#roboticsGradient)"
-                stroke="none"
-              />
-              <path
-                className="robotics-path-stroke"
-                d="M 600,200 C 700,200 800,100 900,100"
-                fill="none"
-                stroke="#87CEEB"
-                strokeWidth="2"
-              />
-            </g>
-            <text
-              x="750"
-              y="80"
-              fill="#87CEEB"
-              className="font-orbitron text-lg"
-            >
-              Robotics
-            </text>
-          </svg>
-
-          <div
-            className="absolute inset-0"
-            style={{ pointerEvents: "none", zIndex: 50 }}
-          >
-            {(["construction", "iot", "robotics"] as const).map((section) => (
-              <div
-                key={section}
-                className="absolute group"
-                style={{
-                  top: 0,
-                  left:
-                    section === "construction"
-                      ? "10%"
-                      : section === "iot"
-                        ? "40%"
-                        : "70%",
-                  width: "min(300px, 80vw)",
-                  height: "300px",
-                  pointerEvents: "auto",
-                }}
-                onMouseEnter={() => setHoveredSection(section)}
+              <g
+                onMouseEnter={() => setHoveredSection("construction")}
                 onMouseLeave={() => setHoveredSection(null)}
               >
+                {/* Construction path with fill */}
+                <path
+                  className="construction-path-fill"
+                  d="M 100,100 C 200,100 300,200 400,200 L 400,200 L 100,200 Z"
+                  fill="url(#constructionGradient)"
+                  stroke="none"
+                />
+                <path
+                  className="construction-path-stroke"
+                  d="M 100,100 C 200,100 300,200 400,200"
+                  fill="none"
+                  stroke="#FFB6C1"
+                  strokeWidth="2"
+                />
+              </g>
+
+              <text
+                x="150"
+                y="80"
+                fill="#FFB6C1"
+                className="font-orbitron text-lg"
+              >
+                Construction
+              </text>
+
+              <g
+                onMouseEnter={() => setHoveredSection("iot")}
+                onMouseLeave={() => setHoveredSection(null)}
+              >
+                {/* IoT path with fill */}
+                <path
+                  className="iot-path-fill"
+                  d="M 200,200 C 350,200 400,100 500,100 S 650,200 800,200 L 800,200 L 200,200 Z"
+                  fill="url(#iotGradient)"
+                  stroke="none"
+                />
+                <path
+                  className="iot-path-stroke"
+                  d="M 200,200 C 350,200 400,100 500,100 S 650,200 800,200"
+                  fill="none"
+                  stroke="#98FB98"
+                  strokeWidth="2"
+                />
+              </g>
+              <text
+                x="490"
+                y="80"
+                fill="#98FB98"
+                className="font-orbitron text-lg"
+              >
+                IoT
+              </text>
+
+              <g
+                onMouseEnter={() => setHoveredSection("robotics")}
+                onMouseLeave={() => setHoveredSection(null)}
+              >
+                {/* Robotics path with fill */}
+                <path
+                  className="robotics-path-fill"
+                  d="M 600,200 C 700,200 800,100 900,100 L 900,200 L 600,200 Z"
+                  fill="url(#roboticsGradient)"
+                  stroke="none"
+                />
+                <path
+                  className="robotics-path-stroke"
+                  d="M 600,200 C 700,200 800,100 900,100"
+                  fill="none"
+                  stroke="#87CEEB"
+                  strokeWidth="2"
+                />
+              </g>
+              <text
+                x="750"
+                y="80"
+                fill="#87CEEB"
+                className="font-orbitron text-lg"
+              >
+                Robotics
+              </text>
+            </svg>
+
+            {/* Hover Cards Container */}
+            <div className="absolute inset-0 pointer-events-none">
+              {(["construction", "iot", "robotics"] as const).map((section) => (
                 <div
-                  className={`absolute p-2 sm:p-4 rounded-lg bg-zinc-700/90 border
+                  key={section}
+                  className="absolute group"
+                  style={{
+                    top: 0,
+                    left:
+                      section === "construction"
+                        ? "10%"
+                        : section === "iot"
+                          ? "40%"
+                          : "70%",
+                    width: "min(300px, 80vw)",
+                    height: "300px",
+                    pointerEvents: "auto",
+                  }}
+                  onMouseEnter={() => setHoveredSection(section)}
+                  onMouseLeave={() => setHoveredSection(null)}
+                >
+                  {/* Card Content */}
+                  <div
+                    className={`absolute p-2 sm:p-4 rounded-lg bg-zinc-700/90 border
                     ${
                       section === "construction"
                         ? "border-pink-400"
@@ -311,239 +317,243 @@ const Experience = () => {
                     shadow-lg transition-all duration-200 text-white
                     ${hoveredSection === section ? "opacity-100" : "opacity-0"}
                     w-[min(calc(100vw-2rem),300px)] sm:w-auto max-w-[300px]
-                    transform origin-top
+                    transform origin-center
                     ${hoveredSection === section ? "translate-y-0" : "-translate-y-2"}`}
-                  style={{ top: "120px" }}
-                >
-                  <h3 className="text-base sm:text-lg font-orbitron mb-2 capitalize">
-                    {section}
-                  </h3>
-                  <p className="text-xs sm:text-sm mb-4">
-                    {sectionContents[section].description}
-                  </p>
-
-                  <div
-                    className={`grid gap-2 ${
-                      section === "construction"
-                        ? "grid-cols-1"
-                        : section === "iot"
-                          ? "grid-cols-4"
-                          : "grid-cols-3"
-                    }`}
+                    style={{ top: "120px" }}
                   >
-                    {sectionContents[section].images.map((image, index) => (
-                      <div
-                        key={index}
-                        className="relative aspect-square rounded-md overflow-hidden bg-zinc-600"
-                      >
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          fill
-                          className="object-contain p-2"
-                          sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 300px"
-                        />
-                      </div>
-                    ))}
+                    <h3 className="text-base sm:text-lg font-orbitron mb-2 capitalize">
+                      {section}
+                    </h3>
+                    <p className="text-xs sm:text-sm mb-4">
+                      {sectionContents[section].description}
+                    </p>
+
+                    <div
+                      className={`grid gap-2 ${
+                        section === "construction"
+                          ? "grid-cols-1"
+                          : section === "iot"
+                            ? "grid-cols-2"
+                            : "grid-cols-3"
+                      }`}
+                    >
+                      {sectionContents[section].images.map((image, index) => (
+                        <div
+                          key={index}
+                          className="relative aspect-square rounded-md overflow-hidden bg-zinc-600"
+                        >
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            className="object-contain p-2"
+                            sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 300px"
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
-        <h3 className="text-lg sm:text-xl font-orbitron text-white mb-4">
-          Past Entrepreneurship Experience
-        </h3>
+        {/* Entrepreneurship Section */}
+        <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
+          <h3 className="text-lg sm:text-xl font-orbitron text-white mb-4">
+            Past Entrepreneurship Experience
+          </h3>
 
-        <div className="w-full aspect-[2/1] relative">
+          <div className="w-full aspect-[2/1] relative">
+            <svg
+              className="w-full h-full"
+              viewBox="0 0 900 420"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <linearGradient
+                  id="entrepreneurshipGradient"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="1"
+                >
+                  <stop offset="0%" stopColor="#FF00FF" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#FF00FF" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <g>
+                {/* Entrepreneurship path with fill */}
+                <path
+                  className="entrepreneurship-path-fill"
+                  d="M 200,200 C 433,200 666,100 900,100 L 900,200 L 200,200 Z"
+                  fill="url(#entrepreneurshipGradient)"
+                  stroke="none"
+                />
+                <path
+                  className="entrepreneurship-path-stroke"
+                  d="M 200,200 C 433,200 666,100 900,100"
+                  fill="none"
+                  stroke="#FF00FF"
+                  strokeWidth="2"
+                />
+
+                {entrepreneurshipPoints.map((point) => (
+                  <g key={point.id}>
+                    {/* Hover area (invisible circle larger than the visible point) */}
+                    <circle
+                      cx={point.x}
+                      cy={point.y}
+                      r="30"
+                      fill="transparent"
+                      className="cursor-pointer"
+                      onMouseEnter={() => setHoveredSection(point.id)}
+                      onMouseLeave={() => setHoveredSection(null)}
+                    />
+
+                    {/* Visible point */}
+                    <circle
+                      cx={point.x}
+                      cy={point.y}
+                      r="7"
+                      fill="#FF00FF"
+                      className="pointer-events-none transition-all duration-200"
+                    />
+
+                    {/* Card with transition */}
+                    <foreignObject
+                      x={point.x - 150}
+                      y={point.y + 20}
+                      width="300"
+                      height="180"
+                      className="overflow-visible pointer-events-none"
+                    >
+                      <div
+                        className={`p-4 rounded-lg bg-zinc-700/90 border border-pink-400 shadow-lg
+                              transition-all duration-300 transform origin-top  // Added origin-top
+                            ${hoveredSection === point.id ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}
+                      >
+                        <h4 className="text-lg font-orbitron text-white mb-1">
+                          {point.companyName}
+                        </h4>
+                        <p className="text-sm text-pink-400 mb-2">
+                          {point.year}
+                        </p>
+                        <p className="text-xs text-white mb-3">
+                          {point.description}
+                        </p>
+                        <div className="relative h-20 w-full rounded-md overflow-hidden bg-zinc-700">
+                          <Image
+                            src={point.image.src}
+                            alt={point.image.alt}
+                            fill
+                            className="object-contain p-2"
+                            sizes="300px"
+                          />
+                        </div>
+                      </div>
+                    </foreignObject>
+                  </g>
+                ))}
+              </g>
+              <text
+                x="750"
+                y="50"
+                fill="#FF00FF"
+                className="font-orbitron text-lg"
+              >
+                Entrepreneurship
+              </text>
+            </svg>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
+          <h3 className="text-xl font-orbitron text-white">Next</h3>
           <svg
-            className="w-full h-full"
-            viewBox="0 0 900 420"
+            className="timeline-svg"
+            viewBox="0 0 900 500"
             preserveAspectRatio="xMidYMid meet"
           >
             <defs>
-              <linearGradient
-                id="entrepreneurshipGradient"
-                x1="0"
-                x2="0"
-                y1="0"
-                y2="1"
-              >
+              <linearGradient id="nextGradient" x1="0" x2="0" y1="0" y2="1">
                 <stop offset="0%" stopColor="#FF00FF" stopOpacity="0.2" />
                 <stop offset="100%" stopColor="#FF00FF" stopOpacity="0" />
               </linearGradient>
             </defs>
             <g>
-              {/* Entrepreneurship path with fill */}
-              <path
-                className="entrepreneurship-path-fill"
-                d="M 200,200 C 433,200 666,100 900,100 L 900,200 L 200,200 Z"
-                fill="url(#entrepreneurshipGradient)"
-                stroke="none"
-              />
-              <path
-                className="entrepreneurship-path-stroke"
-                d="M 200,200 C 433,200 666,100 900,100"
-                fill="none"
-                stroke="#FF00FF"
+              {/* Construction Circle */}
+              <circle
+                cx="300"
+                cy="200"
+                r="150"
+                fill="url(#constructionGradient)"
+                stroke="#FFB6C1"
                 strokeWidth="2"
               />
+              <text
+                x="180"
+                y="150"
+                fill="#FFB6C1"
+                className="font-orbitron text-lg"
+              >
+                Construction
+              </text>
 
-              {entrepreneurshipPoints.map((point) => (
-                <g key={point.id}>
-                  {/* Hover area (invisible circle larger than the visible point) */}
-                  <circle
-                    cx={point.x}
-                    cy={point.y}
-                    r="20"
-                    fill="transparent"
-                    className="cursor-pointer"
-                    onMouseEnter={() => setHoveredSection(point.id)}
-                    onMouseLeave={() => setHoveredSection(null)}
-                  />
+              {/* IoT Circle */}
+              <circle
+                cx="450"
+                cy="200"
+                r="150"
+                fill="url(#iotGradient)"
+                stroke="#98FB98"
+                strokeWidth="2"
+              />
+              <text
+                x="500"
+                y="150"
+                fill="#98FB98"
+                className="font-orbitron text-lg"
+              >
+                IoT
+              </text>
 
-                  {/* Visible point */}
-                  <circle
-                    cx={point.x}
-                    cy={point.y}
-                    r="6"
-                    fill="#FF00FF"
-                    className="pointer-events-none transition-all duration-200"
-                  />
+              {/* Robotics Circle */}
+              <circle
+                cx="375"
+                cy="300"
+                r="150"
+                fill="url(#roboticsGradient)"
+                stroke="#87CEEB"
+                strokeWidth="2"
+              />
+              <text
+                x="340"
+                y="410"
+                fill="#87CEEB"
+                className="font-orbitron text-lg"
+              >
+                Robotics
+              </text>
 
-                  {/* Card with transition */}
-                  <foreignObject
-                    x={point.x - 150}
-                    y={point.y + 20}
-                    width="300"
-                    height="180"
-                    className="overflow-visible pointer-events-none"
-                  >
-                    <div
-                      className={`p-4 rounded-lg bg-zinc-700/90 border border-pink-400 shadow-lg
-                              transition-all duration-300 transform origin-top  // Added origin-top
-                            ${hoveredSection === point.id ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}
-                    >
-                      <h4 className="text-lg font-orbitron text-white mb-1">
-                        {point.companyName}
-                      </h4>
-                      <p className="text-sm text-pink-400 mb-2">{point.year}</p>
-                      <p className="text-xs text-white mb-3">
-                        {point.description}
-                      </p>
-                      <div className="relative h-20 w-full rounded-md overflow-hidden bg-zinc-700">
-                        <Image
-                          src={point.image.src}
-                          alt={point.image.alt}
-                          fill
-                          className="object-contain p-2"
-                          sizes="300px"
-                        />
-                      </div>
-                    </div>
-                  </foreignObject>
-                </g>
-              ))}
+              {/* Intersection Area */}
+              <path
+                d="M 300,200 A 150,150 0 0,1 450,200 A 150,150 0 0,1 375,300 A 150,150 0 0,1 300,200 Z"
+                fill="url(#nextGradient)"
+                stroke="none"
+              />
+              <text
+                x="350"
+                y="250"
+                fill="#FF00FF"
+                className="font-orbitron text-2xl font-bold"
+              >
+                NEXT
+              </text>
             </g>
-            <text
-              x="750"
-              y="80"
-              fill="#FF00FF"
-              className="font-orbitron text-lg"
-            >
-              Entrepreneurship
-            </text>
           </svg>
         </div>
-      </div>
-
-      <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
-        <h3 className="text-xl font-orbitron text-white">Next</h3>
-        <svg
-          className="timeline-svg"
-          viewBox="0 0 900 500"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <defs>
-            <linearGradient id="nextGradient" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#FF00FF" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="#FF00FF" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <g>
-            {/* Construction Circle */}
-            <circle
-              cx="300"
-              cy="200"
-              r="150"
-              fill="url(#constructionGradient)"
-              stroke="#FFB6C1"
-              strokeWidth="2"
-            />
-            <text
-              x="180"
-              y="150"
-              fill="#FFB6C1"
-              className="font-orbitron text-lg"
-            >
-              Construction
-            </text>
-
-            {/* IoT Circle */}
-            <circle
-              cx="450"
-              cy="200"
-              r="150"
-              fill="url(#iotGradient)"
-              stroke="#98FB98"
-              strokeWidth="2"
-            />
-            <text
-              x="500"
-              y="150"
-              fill="#98FB98"
-              className="font-orbitron text-lg"
-            >
-              IoT
-            </text>
-
-            {/* Robotics Circle */}
-            <circle
-              cx="375"
-              cy="300"
-              r="150"
-              fill="url(#roboticsGradient)"
-              stroke="#87CEEB"
-              strokeWidth="2"
-            />
-            <text
-              x="340"
-              y="410"
-              fill="#87CEEB"
-              className="font-orbitron text-lg"
-            >
-              Robotics
-            </text>
-
-            {/* Intersection Area */}
-            <path
-              d="M 300,200 A 150,150 0 0,1 450,200 A 150,150 0 0,1 375,300 A 150,150 0 0,1 300,200 Z"
-              fill="url(#nextGradient)"
-              stroke="none"
-            />
-            <text
-              x="350"
-              y="250"
-              fill="#FF00FF"
-              className="font-orbitron text-2xl font-bold"
-            >
-              NEXT
-            </text>
-          </g>
-        </svg>
       </div>
     </section>
   );
