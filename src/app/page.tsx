@@ -1,8 +1,8 @@
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Experience from '../components/Experience';
-import Industry from '../components/Industry';
-import Academia from '../components/Academia';
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Experience from "../components/Experience";
+import Industry from "../components/Industry";
+import Academia from "../components/Academia";
 
 export default function Home() {
   return (
@@ -13,7 +13,6 @@ export default function Home() {
         <Experience />
         <Industry />
         <Academia />
-
       </div>
     </main>
   );

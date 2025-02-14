@@ -13,7 +13,7 @@ const firebaseConfig = {
   storageBucket: "msz-ai-ad398.firebasestorage.app",
   messagingSenderId: "629062902106",
   appId: "1:629062902106:web:95edef2354d90ff9a69363",
-  measurementId: "G-56YL77JSTQ"
+  measurementId: "G-56YL77JSTQ",
 };
 
 // Initialize Firebase

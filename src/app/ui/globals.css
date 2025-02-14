@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
 
-input[type='number']::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type='number']::-webkit-outer-spin-button {
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -38,22 +38,23 @@ input[type='number']::-webkit-outer-spin-button {
   h4,
   h5,
   h6 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
   }
 
   pre,
   code {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
   }
 
   p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 }
 
 .hero-gradient {
-  background: radial-gradient(circle at center, #00FFFF 0%, transparent 70%),
-    radial-gradient(circle at 20% 80%, #FF00FF 0%, transparent 40%);
+  background:
+    radial-gradient(circle at center, #00ffff 0%, transparent 70%),
+    radial-gradient(circle at 20% 80%, #ff00ff 0%, transparent 40%);
   opacity: 0.15;
 }
 
@@ -72,17 +73,17 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .construction-path {
-  stroke: #FFB6C1;
+  stroke: #ffb6c1;
   fill: url(#constructionGradient);
 }
 
 .iot-path {
-  stroke: #98FB98;
+  stroke: #98fb98;
   fill: url(#iotGradient);
 }
 
 .robotics-path {
-  stroke: #87CEEB;
+  stroke: #87ceeb;
   fill: url(#roboticsGradient);
 }
 
@@ -96,7 +97,6 @@ path:hover {
 }
 
 .annotation {
-
   text-align: center;
   width: 150px;
   padding: 10px;
@@ -133,4 +133,13 @@ path:hover {
   font-size: 12px;
   margin-top: 5px;
   font-weight: normal;
+}
+
+.timeline-svg g {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.timeline-svg g:hover {
+  opacity: 0.8;
 }

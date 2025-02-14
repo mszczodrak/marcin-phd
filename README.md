@@ -35,7 +35,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-
 ## Firebase
 
 npm install -g firebase-tools@latest
@@ -61,3 +60,14 @@ https://firebase.google.com/codelabs/auth-mfa-blocking-functions
 # Build AI-powered web apps with Firebase Extensions for the Gemini API
 
 https://firebase.google.com/codelabs/gemini-api-extensions-web
+
+# Prettier
+
+Prettier is an opinionated code formatter
+
+npm install --save-dev --save-exact prettier
+node --eval "fs.writeFileSync('.prettierrc','{}\n')"
+npx prettier . --write
+npx prettier . --check
+
+https://prettier.io/docs/install
