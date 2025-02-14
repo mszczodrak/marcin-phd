@@ -13,6 +13,19 @@ interface SectionContent {
   }>;
 }
 
+interface EntrepreneurshipPoint {
+  id: string;
+  x: number;
+  y: number;
+  companyName: string;
+  year: string;
+  description: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+}
+
 const sectionContents: Record<SectionType, SectionContent> = {
   construction: {
     description:
@@ -49,15 +62,98 @@ const sectionContents: Record<SectionType, SectionContent> = {
   },
 };
 
+const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
+  {
+    id: "point1",
+    x: 300,
+    y: 185,
+    companyName: "Paxe.net",
+    year: "2007",
+    description: "Founded home office networking startup in NYC.",
+    image: {
+      src: "/images/home_office.png",
+      alt: "Paxe.net",
+    },
+  },
+  {
+    id: "point2",
+    x: 450,
+    y: 160,
+    companyName: "Nest",
+    year: "2015",
+    description:
+      "Joined Nest Labs when it was acquired by Google (~ employee #350)",
+    image: {
+      src: "/images/Nest_logo.png",
+      alt: "Nest logo",
+    },
+  },
+  {
+    id: "point3",
+    x: 550,
+    y: 140,
+    companyName: "Essential",
+    year: "2017",
+    description:
+      "Joined Essential to build the new home operating system AmbientOS. Working out of Playground Global. (~ employee #25)",
+    image: {
+      src: "/images/Essential_logo.png",
+      alt: "Essential logo",
+    },
+  },
+  {
+    id: "point4",
+    x: 500,
+    y: 150,
+    companyName: "Google X",
+    year: "2018",
+    description:
+      "Worked at the Google Moonshot Factory. Joined small industrial robotics project, \
+                which graduated to become an Alphabet company known as Intrinsic (~ employee #18)",
+    image: {
+      src: "/images/X_logo.png",
+      alt: "Google X logo",
+    },
+  },
+  {
+    id: "point5",
+    x: 700,
+    y: 110,
+    companyName: "Figure AI",
+    year: "2022",
+    description:
+      "Joined as the first software engineer to start a new humanoid company. \
+                Working out of co-working Spaces before we got the first big building (~ employee #9)",
+    image: {
+      src: "/images/Figure_ai_logo.png",
+      alt: "Figure AI logo",
+    },
+  },
+  {
+    id: "point6",
+    x: 750,
+    y: 100,
+    companyName: "Hamster Works",
+    year: "2023",
+    description:
+      "Founded R&D startup dedicated to creating innovative tools and processes for building, \
+              maintaining, and fixing embedded software running on microcontrollers. Shipped Firmware Studio.",
+    image: {
+      src: "/images/hamster_works_logo.png",
+      alt: "Hamster Works logo",
+    },
+  },
+];
+
 const Experience = () => {
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
 
   return (
     <section id="experience" className="bg-zinc-900 text-text p-20 relative">
-      <h2 className="text-3xl font-orbitron mb-4 text-white">Experience</h2>
-      <div className="max-w-5xl mx-auto px-8 relative">
-        <h3 className="text-xl font-orbitron mb-4 text-white">
-          Research & Development
+      <h2 className="text-3xl font-orbitron mb-2 text-white">Experience</h2>
+      <div className="max-w-5xl mx-auto px-4 relative">
+        <h3 className="text-xl font-orbitron text-white">
+          Past Research & Development Experience
         </h3>
         <svg
           className="timeline-svg"
@@ -157,7 +253,10 @@ const Experience = () => {
         </svg>
 
         {/* Updated hover areas with description boxes and images */}
-        <div className="absolute inset-0" style={{ pointerEvents: "none" }}>
+        <div
+          className="absolute inset-0"
+          style={{ pointerEvents: "none", zIndex: 50 }}
+        >
           {(["construction", "iot", "robotics"] as const).map((section) => (
             <div
               key={section}
@@ -228,13 +327,13 @@ const Experience = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-8 relative">
-        <h3 className="text-xl font-orbitron mb-4 text-white">
-          Entrepreneurship
+      <div className="max-w-5xl mx-auto px-4 relative">
+        <h3 className="text-xl font-orbitron text-white">
+          Past Entrepreneurship Experience
         </h3>
         <svg
           className="timeline-svg"
-          viewBox="0 0 900 400"
+          viewBox="0 0 900 420"
           preserveAspectRatio="xMidYMid meet"
         >
           <defs>
@@ -249,10 +348,7 @@ const Experience = () => {
               <stop offset="100%" stopColor="#FF00FF" stopOpacity="0" />
             </linearGradient>
           </defs>
-          <g
-            onMouseEnter={() => setHoveredSection("entrepreneurship")}
-            onMouseLeave={() => setHoveredSection(null)}
-          >
+          <g>
             {/* Entrepreneurship path with fill */}
             <path
               className="entrepreneurship-path-fill"
@@ -267,10 +363,152 @@ const Experience = () => {
               stroke="#FF00FF"
               strokeWidth="2"
             />
+
+            {entrepreneurshipPoints.map((point) => (
+              <g key={point.id}>
+                {/* Hover area (invisible circle larger than the visible point) */}
+                <circle
+                  cx={point.x}
+                  cy={point.y}
+                  r="20"
+                  fill="transparent"
+                  className="cursor-pointer"
+                  onMouseEnter={() => setHoveredSection(point.id)}
+                  onMouseLeave={() => setHoveredSection(null)}
+                />
+
+                {/* Visible point */}
+                <circle
+                  cx={point.x}
+                  cy={point.y}
+                  r="6"
+                  fill="#FF00FF"
+                  className="pointer-events-none transition-all duration-200"
+                />
+
+                {/* Card with transition */}
+                <foreignObject
+                  x={point.x - 150}
+                  y={point.y + 20}
+                  width="300"
+                  height="180"
+                  className="overflow-visible pointer-events-none"
+                >
+                  <div
+                    className={`p-4 rounded-lg bg-zinc-700/90 border border-pink-400 shadow-lg
+                              transition-all duration-300 transform origin-top  // Added origin-top
+                            ${hoveredSection === point.id ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}
+                  >
+                    <h4 className="text-lg font-orbitron text-white mb-1">
+                      {point.companyName}
+                    </h4>
+                    <p className="text-sm text-pink-400 mb-2">{point.year}</p>
+                    <p className="text-xs text-white mb-3">
+                      {point.description}
+                    </p>
+                    <div className="relative h-20 w-full rounded-md overflow-hidden bg-zinc-700">
+                      <Image
+                        src={point.image.src}
+                        alt={point.image.alt}
+                        fill
+                        className="object-contain p-2"
+                        sizes="300px"
+                      />
+                    </div>
+                  </div>
+                </foreignObject>
+              </g>
+            ))}
           </g>
           <text x="750" y="80" fill="#FF00FF" className="font-orbitron text-lg">
             Entrepreneurship
           </text>
+        </svg>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 relative">
+        <h3 className="text-xl font-orbitron text-white">Next</h3>
+        <svg
+          className="timeline-svg"
+          viewBox="0 0 900 500"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <defs>
+            <linearGradient id="nextGradient" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stopColor="#FF00FF" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="#FF00FF" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <g>
+            {/* Construction Circle */}
+            <circle
+              cx="300"
+              cy="200"
+              r="150"
+              fill="url(#constructionGradient)"
+              stroke="#FFB6C1"
+              strokeWidth="2"
+            />
+            <text
+              x="180"
+              y="150"
+              fill="#FFB6C1"
+              className="font-orbitron text-lg"
+            >
+              Construction
+            </text>
+
+            {/* IoT Circle */}
+            <circle
+              cx="450"
+              cy="200"
+              r="150"
+              fill="url(#iotGradient)"
+              stroke="#98FB98"
+              strokeWidth="2"
+            />
+            <text
+              x="500"
+              y="150"
+              fill="#98FB98"
+              className="font-orbitron text-lg"
+            >
+              IoT
+            </text>
+
+            {/* Robotics Circle */}
+            <circle
+              cx="375"
+              cy="300"
+              r="150"
+              fill="url(#roboticsGradient)"
+              stroke="#87CEEB"
+              strokeWidth="2"
+            />
+            <text
+              x="340"
+              y="410"
+              fill="#87CEEB"
+              className="font-orbitron text-lg"
+            >
+              Robotics
+            </text>
+
+            {/* Intersection Area */}
+            <path
+              d="M 300,200 A 150,150 0 0,1 450,200 A 150,150 0 0,1 375,300 A 150,150 0 0,1 300,200 Z"
+              fill="url(#nextGradient)"
+              stroke="none"
+            />
+            <text
+              x="350"
+              y="250"
+              fill="#FF00FF"
+              className="font-orbitron text-2xl font-bold"
+            >
+              NEXT
+            </text>
+          </g>
         </svg>
       </div>
     </section>
