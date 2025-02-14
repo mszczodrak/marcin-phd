@@ -1,4 +1,3 @@
-// filepath: /workspaces/msz-ai/src/components/Hero.tsx
 "use client"
 
 import { motion } from "framer-motion"
