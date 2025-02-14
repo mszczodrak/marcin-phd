@@ -7,6 +7,6 @@ const Industry = () => {
             </div>
         </section>
     );
-  };
+};
   
-  export default Industry;
+export default Industry;
