@@ -151,14 +151,14 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="bg-zinc-900 text-text p-4 sm:p-8 md:p-20 relative"
+      className="bg-zinc-900 text-text p-4 sm:p-8 md:p-20 relative w-screen overflow-x-hidden"
     >
       <h2 className="text-2xl sm:text-3xl font-orbitron mb-2 text-white">
         Experience
       </h2>
 
       {/* R&D Experience Section */}
-      <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16">
+      <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
         <h3 className="text-lg sm:text-xl font-orbitron text-white mb-4">
           Past Research & Development Experience
         </h3>
@@ -310,7 +310,7 @@ const Experience = () => {
                     } 
                     shadow-lg transition-all duration-200 text-white
                     ${hoveredSection === section ? "opacity-100" : "opacity-0"}
-                    w-[calc(100vw-2rem)] sm:w-auto max-w-[300px]
+                    w-[min(calc(100vw-2rem),300px)] sm:w-auto max-w-[300px]
                     transform origin-top
                     ${hoveredSection === section ? "translate-y-0" : "-translate-y-2"}`}
                   style={{ top: "120px" }}
@@ -327,7 +327,7 @@ const Experience = () => {
                       section === "construction"
                         ? "grid-cols-1"
                         : section === "iot"
-                          ? "grid-cols-2"
+                          ? "grid-cols-4"
                           : "grid-cols-3"
                     }`}
                   >
@@ -353,7 +353,7 @@ const Experience = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16">
+      <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
         <h3 className="text-lg sm:text-xl font-orbitron text-white mb-4">
           Past Entrepreneurship Experience
         </h3>
@@ -460,7 +460,7 @@ const Experience = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 relative">
+      <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
         <h3 className="text-xl font-orbitron text-white">Next</h3>
         <svg
           className="timeline-svg"
