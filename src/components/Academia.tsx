@@ -5,22 +5,22 @@ import Image from "next/image";
 
 const Academia = () => {
   return (
-    <section id="academia" className="bg-zinc-800 text-text p-8">
-      <h2 className="text-3xl font-orbitron text-white mb-4">Academia</h2>
+    <section id="academia" className="bg-background text-text p-8">
+      <h2 className="text-3xl font-orbitron mb-4">Academia</h2>
       <div className="max-w-5xl mx-auto px-8">
-        <div className="flex items-center mb-4">
-          <h2 className="text-2xl font-orbitron mr-4 text-white">
+        <div className="flex items-center mb-6">
+          <h2 className="text-2xl font-orbitron mr-4">
             Ph.D. in Computer Science from Columbia University, NY.
           </h2>
           <Image
             src="/images/columbia_university_logo.png"
             alt="Columbia University Logo"
-            width={150}
-            height={150}
+            width={32}
+            height={32}
           />
         </div>
         <HoverEffect items={projects} />
-        <div className="mt-12 text-gray-300">
+        <div className="mt-12">
           <h3 className="text-2xl font-orbitron mb-6">Publications</h3>
           <ul className="space-y-6">
             {publications.map((pub, index) => (

@@ -471,88 +471,90 @@ const Experience = () => {
 
         <div className="max-w-5xl mx-auto px-2 sm:px-4 relative mb-8 sm:mb-16 w-full overflow-hidden">
           <h3 className="text-xl font-orbitron text-white">Next</h3>
-          <svg
-            className="timeline-svg"
-            viewBox="0 0 900 500"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <defs>
-              <linearGradient id="nextGradient" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0%" stopColor="#FF00FF" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="#FF00FF" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <g>
-              {/* Construction Circle */}
-              <circle
-                cx="300"
-                cy="200"
-                r="150"
-                fill="url(#constructionGradient)"
-                stroke="#FFB6C1"
-                strokeWidth="2"
-              />
-              <text
-                x="180"
-                y="150"
-                fill="#FFB6C1"
-                className="font-orbitron text-lg"
-              >
-                Construction
-              </text>
+          <div className="flex justify-center">
+            <svg
+              className="timeline-svg"
+              viewBox="0 0 900 500"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <linearGradient id="nextGradient" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="#FF00FF" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#FF00FF" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <g>
+                {/* Construction Circle */}
+                <circle
+                  cx="300"
+                  cy="200"
+                  r="150"
+                  fill="url(#constructionGradient)"
+                  stroke="#FFB6C1"
+                  strokeWidth="2"
+                />
+                <text
+                  x="180"
+                  y="150"
+                  fill="#FFB6C1"
+                  className="font-orbitron text-lg"
+                >
+                  Construction
+                </text>
 
-              {/* IoT Circle */}
-              <circle
-                cx="450"
-                cy="200"
-                r="150"
-                fill="url(#iotGradient)"
-                stroke="#98FB98"
-                strokeWidth="2"
-              />
-              <text
-                x="500"
-                y="150"
-                fill="#98FB98"
-                className="font-orbitron text-lg"
-              >
-                IoT
-              </text>
+                {/* IoT Circle */}
+                <circle
+                  cx="450"
+                  cy="200"
+                  r="150"
+                  fill="url(#iotGradient)"
+                  stroke="#98FB98"
+                  strokeWidth="2"
+                />
+                <text
+                  x="500"
+                  y="150"
+                  fill="#98FB98"
+                  className="font-orbitron text-lg"
+                >
+                  IoT
+                </text>
 
-              {/* Robotics Circle */}
-              <circle
-                cx="375"
-                cy="300"
-                r="150"
-                fill="url(#roboticsGradient)"
-                stroke="#87CEEB"
-                strokeWidth="2"
-              />
-              <text
-                x="340"
-                y="410"
-                fill="#87CEEB"
-                className="font-orbitron text-lg"
-              >
-                Robotics
-              </text>
+                {/* Robotics Circle */}
+                <circle
+                  cx="375"
+                  cy="300"
+                  r="150"
+                  fill="url(#roboticsGradient)"
+                  stroke="#87CEEB"
+                  strokeWidth="2"
+                />
+                <text
+                  x="340"
+                  y="410"
+                  fill="#87CEEB"
+                  className="font-orbitron text-lg"
+                >
+                  Robotics
+                </text>
 
-              {/* Intersection Area */}
-              <path
-                d="M 300,200 A 150,150 0 0,1 450,200 A 150,150 0 0,1 375,300 A 150,150 0 0,1 300,200 Z"
-                fill="url(#nextGradient)"
-                stroke="none"
-              />
-              <text
-                x="350"
-                y="250"
-                fill="#FF00FF"
-                className="font-orbitron text-2xl font-bold"
-              >
-                NEXT
-              </text>
-            </g>
-          </svg>
+                {/* Intersection Area */}
+                <path
+                  d="M 300,200 A 150,150 0 0,1 450,200 A 150,150 0 0,1 375,300 A 150,150 0 0,1 300,200 Z"
+                  fill="url(#nextGradient)"
+                  stroke="none"
+                />
+                <text
+                  x="350"
+                  y="250"
+                  fill="#FF00FF"
+                  className="font-orbitron text-2xl font-bold"
+                >
+                  NEXT
+                </text>
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
