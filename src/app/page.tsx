@@ -4,18 +4,20 @@ import Experience from "../components/Experience";
 import Industry from "../components/Industry";
 import Academia from "../components/Academia";
 import Firebase from "../components/Firebase";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="items-center justify-center min-h-screen bg-background text-text">
-      <div>
-        <Header />
+    <>
+      <Header />
+      <main className="items-center justify-center min-h-screen bg-background text-text">
         <Hero />
         <Experience />
         <Industry />
         <Academia />
         <Firebase />
-      </div>
-    </main>
+      </main >
+      <Footer />
+    </>
   );
 }
