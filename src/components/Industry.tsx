@@ -8,13 +8,13 @@ const features = [
     description: "Founder & CEO or a Research & Development Lab dedicated to creating innovative tools \
                   and processes for building, maintaining, and fixing embedded software running on microcontrollers",
     image:
-      "images/firmware_studio_hero.png",
+      "images/firmware_studio_hero.webp",
   },
   {
     title: "Figure AI",
     description: "Started company's software development infrastructure from scratch and designed the first version of the Humanoid Management Systems.",
     image:
-      "images/Figure_02_Web.png",
+      "images/Figure_02_Web.webp",
   },
   {
     title: "Tesla",
@@ -28,13 +28,13 @@ const features = [
     description: "Robots playing ping pong, Reinforcement Learning with Model Predictive Control and \
                 robotics teleoperation.",
     image:
-      "images/google_brain_ping_pong.png",
+      "images/google_brain_ping_pong.webp",
   },
   {
     title: "Google X (now Instrinsic)",
     description: "AI meets Indystry 4.0. Building the future of manufacturing with AI and robotics.",
     image:
-      "images/google_x_instrinsic.png",
+      "images/google_x_instrinsic.webp",
   },
   {
     title: "Google Hardware",
@@ -53,7 +53,7 @@ const features = [
     description: "Building a conscious home that takes care of people inside and the surrounding environment. \
                 Nest Learning Thermostat, Nest Protect, Nest Security and network protocols for smart home: Thread and Weave.",
     image:
-      "images/nest_home_security.png",
+      "images/nest_home_security.webp",
   },
   {
     title: "Philips",

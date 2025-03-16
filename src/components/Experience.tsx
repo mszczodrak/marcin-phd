@@ -33,7 +33,7 @@ const sectionContents: Record<SectionType, SectionContent> = {
                   wood and metal framings, all the way to windows, sheetrock, plywood, doors, and finishing.",
     images: [
       {
-        src: "/images/NYC_downtown_manhattan.jpg",
+        src: "/images/NYC_downtown_manhattan.webp",
         alt: "New York City downtown Manhattan skyline",
       },
     ],
@@ -43,10 +43,10 @@ const sectionContents: Record<SectionType, SectionContent> = {
       "Research and Development in Wireless Sensor Networks, Cyber-Physical Systems and Internet of Things. \
                   Focusing on applications in Smart Home and Smart City. Shipped products with Phillips, Nest, Essential, and Tesla.",
     images: [
-      { src: "/images/Philips_logo.png", alt: "Philips company logo" },
-      { src: "/images/Nest_logo.png", alt: "Nest company logo" },
-      { src: "/images/Essential_logo.png", alt: "Essential company logo" },
-      { src: "/images/Tesla_logo.png", alt: "Tesla company logo" },
+      { src: "/images/Philips_logo.webp", alt: "Philips company logo" },
+      { src: "/images/Nest_logo.webp", alt: "Nest company logo" },
+      { src: "/images/Essential_logo.webp", alt: "Essential company logo" },
+      { src: "/images/Tesla_logo.webp", alt: "Tesla company logo" },
     ],
   },
   robotics: {
@@ -55,9 +55,9 @@ const sectionContents: Record<SectionType, SectionContent> = {
       Training arm robots with Reinforcement Learning algorithms. Building humanoid software stack. \
       Google X (now Intrinsic), Google Brain Robotics and Figure AI.",
     images: [
-      { src: "/images/X_logo.png", alt: "Google X (Intrinsic) logo" },
-      { src: "/images/Google_logo.png", alt: "Google logo" },
-      { src: "/images/Figure_ai_logo.png", alt: "Figure AI logo" },
+      { src: "/images/X_logo.webp", alt: "Google X (Intrinsic) logo" },
+      { src: "/images/Google_logo.webp", alt: "Google logo" },
+      { src: "/images/Figure_ai_logo.webp", alt: "Figure AI logo" },
     ],
   },
 };
@@ -71,7 +71,7 @@ const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
     year: "2007",
     description: "Founded home office networking startup in NYC.",
     image: {
-      src: "/images/home_office.png",
+      src: "/images/home_office.webp",
       alt: "Paxe.net",
     },
   },
@@ -84,7 +84,7 @@ const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
     description:
       "Joined Nest Labs when it was acquired by Google (~ employee #350)",
     image: {
-      src: "/images/Nest_logo.png",
+      src: "/images/Nest_logo.webp",
       alt: "Nest logo",
     },
   },
@@ -97,7 +97,7 @@ const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
     description:
       "Joined Essential to build the new home operating system AmbientOS. Working out of Playground Global. (~ employee #25)",
     image: {
-      src: "/images/Essential_logo.png",
+      src: "/images/Essential_logo.webp",
       alt: "Essential logo",
     },
   },
@@ -111,7 +111,7 @@ const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
       "Worked at the Google Moonshot Factory. Joined small industrial robotics project, \
                 which graduated to become an Alphabet company known as Intrinsic (~ employee #18)",
     image: {
-      src: "/images/X_logo.png",
+      src: "/images/X_logo.webp",
       alt: "Google X logo",
     },
   },
@@ -125,7 +125,7 @@ const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
       "Joined as the first software engineer to start a new humanoid company. \
                 Working out of co-working Spaces before we got the first big building (~ employee #9)",
     image: {
-      src: "/images/Figure_ai_logo.png",
+      src: "/images/Figure_ai_logo.webp",
       alt: "Figure AI logo",
     },
   },
@@ -139,7 +139,7 @@ const entrepreneurshipPoints: EntrepreneurshipPoint[] = [
       "Founded R&D startup dedicated to creating innovative tools and processes for building, \
               maintaining, and fixing embedded software running on microcontrollers. Shipped Firmware Studio.",
     image: {
-      src: "/images/hamster_works_logo.png",
+      src: "/images/hamster_works_logo.webp",
       alt: "Hamster Works logo",
     },
   },
@@ -307,13 +307,12 @@ const Experience = () => {
                   {/* Card Content */}
                   <div
                     className={`absolute p-2 sm:p-4 rounded-lg bg-zinc-700/90 border
-                    ${
-                      section === "construction"
+                    ${section === "construction"
                         ? "border-pink-400"
                         : section === "iot"
                           ? "border-green-400"
                           : "border-blue-400"
-                    } 
+                      } 
                     shadow-lg transition-all duration-200 text-white
                     ${hoveredSection === section ? "opacity-100" : "opacity-0"}
                     w-[min(calc(100vw-2rem),300px)] sm:w-auto max-w-[300px]
@@ -329,13 +328,12 @@ const Experience = () => {
                     </p>
 
                     <div
-                      className={`grid gap-2 ${
-                        section === "construction"
-                          ? "grid-cols-1"
-                          : section === "iot"
-                            ? "grid-cols-2"
-                            : "grid-cols-3"
-                      }`}
+                      className={`grid gap-2 ${section === "construction"
+                        ? "grid-cols-1"
+                        : section === "iot"
+                          ? "grid-cols-2"
+                          : "grid-cols-3"
+                        }`}
                     >
                       {sectionContents[section].images.map((image, index) => (
                         <div

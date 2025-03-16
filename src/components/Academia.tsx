@@ -13,7 +13,7 @@ const Academia = () => {
             Ph.D. in Computer Science from Columbia University, NY.
           </h2>
           <Image
-            src="/images/columbia_university_logo.png"
+            src="/images/columbia_university_logo.webp"
             alt="Columbia University Logo"
             width={32}
             height={32}
@@ -53,7 +53,7 @@ const Academia = () => {
 export const projects = [
   {
     title: "Fennec Fox",
-    image: "/images/fennec_stack_states.png",
+    image: "/images/fennec_stack_states.webp",
     description:
       "Fennec Fox is a platform for low-power wireless embedded devices requiring \
         dynamic network reconfiguration and communication service adaption. Fennec Fox is a platform \
@@ -64,7 +64,7 @@ export const projects = [
   },
   {
     title: "Swift Fox",
-    image: "/images/swift_fox_arch_small.png",
+    image: "/images/swift_fox_arch_small.webp",
     description:
       "Swift Fox is a programming language for runtime dynamic network reconfiguration of low-power wireless network \
         running on Fennec Fox platform. Swift Fox compiler is written in C using Flex and Bison libraries. \
@@ -74,7 +74,7 @@ export const projects = [
   },
   {
     title: "Hardware-Software-Network Codesign for Internet-of-Things",
-    image: "/images/hw_sw_net.png",
+    image: "/images/hw_sw_net.webp",
     description:
       "Hardware-Software-Network Codesign for Internet-of-Things introduces a new development \
         environment for wireless embedded devices that consists of hardware platform simulator, \
@@ -86,7 +86,7 @@ export const projects = [
   },
   {
     title: "GOALI Project",
-    image: "/images/goali_idea_small.png",
+    image: "/images/goali_idea_small.webp",
     description:
       "GOALI Project is NSF sponsored project researching methods for network-enabled embedded \
       monitoring and control for high-performance buildings. Because building occupancy has \
@@ -98,7 +98,7 @@ export const projects = [
   },
   {
     title: "Open Testbed Framework",
-    image: "/images/testbed_user.png",
+    image: "/images/testbed_user.webp",
     description:
       "Open Testbed Framework The Open Testbed Framework (OTF) consists of a set of tools for rapid \
         deployment of a Low-Power Wireless Network (LPWN) testbeds. The LPWN is the underlying \
@@ -109,7 +109,7 @@ export const projects = [
   },
   {
     title: "EnHANTs",
-    image: "/images/enhants.png",
+    image: "/images/enhants.webp",
     description:
       "Energy-Harvesting Active Networked Tags (EnHANTs) are small, flexible, and energetically \
         self-reliant devices that can be attached to objects that are traditionally not networked \
