@@ -12,7 +12,6 @@ export default function Home() {
       <Header />
       <main className="items-center justify-center min-h-screen bg-background text-text">
         <Hero />
-        <Experience />
         <Industry />
         <Academia />
         <Firebase />
