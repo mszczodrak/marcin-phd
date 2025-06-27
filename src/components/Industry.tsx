@@ -65,7 +65,7 @@ const features = [
 
 const Industry = () => {
   return (
-    <section id="industry" className="bg-zinc-800 text-text p-8">
+    <section id="industry" className="bg-zinc-900 text-text p-8">
       <h2 className="text-3xl font-orbitron text-white mb-4">Industry</h2>
       <div className="max-w-5xl mx-auto px-8">
         <div className="grid gap-12">

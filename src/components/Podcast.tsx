@@ -3,7 +3,7 @@ import { FaSpotify, FaApple, FaYoutube, FaAmazon } from 'react-icons/fa';
 
 const Podcast = () => {
   return (
-    <section id="podcast" className="bg-zinc-800 text-text p-8">
+    <section id="podcast" className="bg-zinc-800 text-text p-8 pb-16">
       <h2 className="text-3xl font-orbitron text-white mb-4">Podcast</h2>
       <div className="max-w-5xl mx-auto px-8">
         <div className="grid md:grid-cols-3 gap-12 items-center">
