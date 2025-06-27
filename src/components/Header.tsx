@@ -4,6 +4,7 @@ import Msz from "./Msz";
 const Header = () => {
   const links = [
     { href: "/", label: "Home" },
+    { href: "/#podcast", label: "Podcast" },
     { href: "/#industry", label: "Industry" },
     { href: "/#academia", label: "Academia" },
   ];

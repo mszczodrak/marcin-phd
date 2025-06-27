@@ -28,16 +28,16 @@ const Podcast = () => {
               If you believe the best blueprint for the future is found in the lessons of the past, subscribe to get your weekly guide to building a better business.
             </p>
             <div className="flex space-x-6">
-              <a href="#" aria-label="Listen on Spotify" className="text-white hover:text-green-500 transition-colors">
+              <a href="https://open.spotify.com/episode/4lUxRStCSLM7ChECA8hIg1?si=-O1xg0EXTuSdZsJD-GygIg" aria-label="Listen on Spotify" className="text-white hover:text-green-500 transition-colors">
                 <FaSpotify size={32} />
               </a>
-              <a href="#" aria-label="Listen on Apple Podcasts" className="text-white hover:text-purple-500 transition-colors">
+              <a href="https://podcasts.apple.com/us/podcast/landmark-lessons/id1823296966" aria-label="Listen on Apple Podcasts" className="text-white hover:text-purple-500 transition-colors">
                 <FaApple size={32} />
               </a>
-              <a href="#" aria-label="Listen on YouTube Music" className="text-white hover:text-red-500 transition-colors">
+              <a href="https://www.youtube.com/playlist?list=PLg0E3ChCrhVrn88MKddvzobER08Y_6uuw" aria-label="Listen on YouTube Music" className="text-white hover:text-red-500 transition-colors">
                 <FaYoutube size={32} />
               </a>
-              <a href="#" aria-label="Listen on Amazon Music" className="text-white hover:text-blue-400 transition-colors">
+              <a href="https://music.amazon.com/podcasts/3bdba5ee-04c9-453a-8968-1c72defaf6d6/landmark-lessons" aria-label="Listen on Amazon Music" className="text-white hover:text-blue-400 transition-colors">
                 <FaAmazon size={32} />
               </a>
             </div>
