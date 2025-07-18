@@ -34,7 +34,7 @@ const Podcast = () => {
               <a href="https://podcasts.apple.com/us/podcast/landmark-lessons/id1823296966" aria-label="Listen on Apple Podcasts" className="text-white hover:text-purple-500 transition-colors">
                 <FaApple size={32} />
               </a>
-              <a href="https://www.youtube.com/playlist?list=PLg0E3ChCrhVrn88MKddvzobER08Y_6uuw" aria-label="Listen on YouTube Music" className="text-white hover:text-red-500 transition-colors">
+              <a href="https://www.youtube.com/watch?v=V-J8VbsEJqo&list=PLnBpFdc2dsFcSo-qDA8XQyzpMu5bQq42P&ab_channel=LandmarkLessons" aria-label="Listen on YouTube Music" className="text-white hover:text-red-500 transition-colors">
                 <FaYoutube size={32} />
               </a>
               <a href="https://music.amazon.com/podcasts/3bdba5ee-04c9-453a-8968-1c72defaf6d6/landmark-lessons" aria-label="Listen on Amazon Music" className="text-white hover:text-blue-400 transition-colors">
