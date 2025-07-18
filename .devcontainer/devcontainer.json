@@ -23,11 +23,11 @@
 		"ghcr.io/devcontainers/features/python:1": {},
 		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers-extra/features/firebase-cli:2": {}
-	}
+	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "",
+	"postCreateCommand": "npx --yes @next/codemod@latest upgrade latest; npm install -g npm@latest; npm install -g n; sudo npm install -g firebase-tools@latest"
 	// Comment out to connect as a non-root user if you've added one. See https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
