@@ -16,12 +16,10 @@ export function FirebaseAnalyticsWatcher() {
         // Construct the full URL, adding a '?' only if there are search params.
         const url = pathname + (search ? `?${search}` : '');
 
-        // Corrected line: removed the '()' after analytics
         analytics.then(fbAnalytics => {
             if (fbAnalytics) {
                 logEvent(fbAnalytics, 'page_view', {
                     page_location: url,
-                    page_path: pathname,
                 });
             }
         });
