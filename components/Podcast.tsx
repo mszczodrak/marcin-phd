@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { FaSpotify, FaApple, FaYoutube, FaAmazon } from 'react-icons/fa';
+import Link from "next/link";
 
 const Podcast = () => {
   return (
@@ -8,16 +9,20 @@ const Podcast = () => {
       <div className="max-w-5xl mx-auto px-8">
         <div className="grid md:grid-cols-3 gap-12 items-center">
           <div className="md:col-span-1">
-            <Image
-              src="/images/Landmark_Lessons_Icon_1.webp"
-              alt="Landmark Lessons Podcast Cover Art"
-              width={300}
-              height={300}
-              className="rounded-lg shadow-lg mx-auto"
-            />
+            <Link href="https://landmarklessons.com" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/images/Landmark_Lessons_Icon_1.webp"
+                alt="Landmark Lessons Podcast Cover Art"
+                width={300}
+                height={300}
+                className="rounded-lg shadow-lg mx-auto"
+              />
+            </Link>
           </div>
           <div className="md:col-span-2 text-white">
-            <h3 className="text-4xl font-bold mb-4">Landmark Lessons</h3>
+            <Link href="https://landmarklessons.com" target="_blank" rel="noopener noreferrer">
+              <h3 className="text-4xl font-bold mb-4 hover:underline">Landmark Lessons</h3>
+            </Link>
             <p className="mb-6">
               Welcome to Landmark Lessons, the podcast that deconstructs the pivotal moments and influential people that define an entrepreneurial journey.
             </p>
