@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Industry from "../components/Industry";
 import Podcast from "../components/Podcast";
@@ -10,8 +9,7 @@ export default function HomePage() {
     <div className="container mx-auto px-4">
       <main className="my-12">
 
-        {/* Header & Hero Section */}
-        <Header />
+        {/* Hero Section */}
         <Hero />
 
         {/* Content Sections */}
