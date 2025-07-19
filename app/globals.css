@@ -41,8 +41,6 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/background-grid.svg');
-  background-repeat: repeat;
   opacity: 0.05;
   z-index: -1;
 }
