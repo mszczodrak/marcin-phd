@@ -10,7 +10,11 @@ export function FirebaseAnalyticsWatcher() {
     const searchParams = useSearchParams();
 
     useEffect(() => {
-        const url = pathname + searchParams.toString();
+        // Safely get the search params string.
+        const search = searchParams?.toString();
+        
+        // Construct the full URL, adding a '?' only if there are search params.
+        const url = pathname + (search ? `?${search}` : '');
 
         // Corrected line: removed the '()' after analytics
         analytics.then(fbAnalytics => {
