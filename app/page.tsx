@@ -3,21 +3,25 @@ import Hero from "../components/Hero";
 import Industry from "../components/Industry";
 import Podcast from "../components/Podcast";
 import Academia from "../components/Academia";
-import Firebase from "../components/Firebase";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <Header />
-      <main className="items-center justify-center min-h-screen bg-background text-text">
+    <div className="container mx-auto px-4">
+      <main className="my-12">
+
+        {/* Header & Hero Section */}
+        <Header />
         <Hero />
+
+        {/* Content Sections */}
         <Podcast />
         <Industry />
         <Academia />
-        <Firebase />
-      </main >
-      <Footer />
-    </>
+
+        {/* Footer */}
+        <Footer />
+      </main>
+    </div>
   );
 }
