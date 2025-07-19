@@ -8,58 +8,58 @@ const features = [
     description: "Founder & CEO or a Research & Development Lab dedicated to creating innovative tools \
                   and processes for building, maintaining, and fixing embedded software running on microcontrollers",
     image:
-      "images/firmware_studio_hero.webp",
+      "/images/firmware_studio_hero.webp",
   },
   {
     title: "Figure AI",
     description: "Started company's software development infrastructure from scratch and designed the first version of the Humanoid Management Systems.",
     image:
-      "images/Figure_02_Web.webp",
+      "/images/Figure_02_Web.webp",
   },
   {
     title: "Tesla",
     description: "Accelerated transition to sustainable energy with industrial (Megapack) and \
                   residential (Powerwall) energy storage products as well as witeless vehicle charging.",
     image:
-      "images/tesla_projects.jpeg",
+      "/images/tesla_projects.jpeg",
   },
   {
     title: "Google Brain Robotics",
     description: "Robots playing ping pong, Reinforcement Learning with Model Predictive Control and \
                 robotics teleoperation.",
     image:
-      "images/google_brain_ping_pong.webp",
+      "/images/google_brain_ping_pong.webp",
   },
   {
     title: "Google X (now Instrinsic)",
     description: "AI meets Indystry 4.0. Building the future of manufacturing with AI and robotics.",
     image:
-      "images/google_x_instrinsic.webp",
+      "/images/google_x_instrinsic.webp",
   },
   {
     title: "Google Hardware",
     description: "Nest Thermostat, 3rd Generation and version E.",
     image:
-      "images/nest_thermostat_3.webp",
+      "/images/nest_thermostat_3.webp",
   },
   {
     title: "Essential",
     description: "New home operating system Ambient OS - the biggest thing since Android.",
     image:
-      "images/essential_home.webp",
+      "/images/essential_home.webp",
   },
   {
     title: "Nest",
     description: "Building a conscious home that takes care of people inside and the surrounding environment. \
                 Nest Learning Thermostat, Nest Protect, Nest Security and network protocols for smart home: Thread and Weave.",
     image:
-      "images/nest_home_security.webp",
+      "/images/nest_home_security.webp",
   },
   {
     title: "Philips",
     description: "Helping to build the future of smart city with outdoor ligting products.",
     image:
-      "images/philips_lighting.jpg",
+      "/images/philips_lighting.jpg",
   },
 ]
 
