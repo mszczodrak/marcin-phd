@@ -73,6 +73,10 @@ body::before {
 
 .hover-lime-scale:hover {
   color: lime;
-  /* transform: scale(1,1); */
-  @apply scale-105;
+  transform: scale(1.05);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
 }

@@ -15,7 +15,7 @@ const Podcast = () => {
                 alt="Landmark Lessons Podcast Cover Art"
                 width={300}
                 height={300}
-                className="rounded-lg shadow-lg mx-auto"
+                className="rounded-lg shadow-lg mx-auto hover-glow"
               />
             </Link>
           </div>
