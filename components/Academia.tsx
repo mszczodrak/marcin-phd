@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Academia = () => {
   return (
-    <section id="academia" className="bg-background text-text p-8">
+    <section id="academia" className="text-white p-8">
       <h2 className="text-3xl font-orbitron mb-4">Academia</h2>
       <div className="max-w-5xl mx-auto px-8">
         <div className="flex items-center mb-6">
@@ -13,10 +13,12 @@ const Academia = () => {
             Ph.D. in Computer Science from Columbia University, NY.
           </h2>
           <Image
-            src="/images/columbia_university_logo.webp"
+            src="/images/columbia_university_logo_125x100.webp"
             alt="Columbia University Logo"
-            width={32}
-            height={32}
+            width={125}
+            height={100}
+            className="rounded-full"
+ 
           />
         </div>
         <HoverEffect items={projects} />
