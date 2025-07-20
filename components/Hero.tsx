@@ -82,8 +82,8 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" /> */}
 
       <div className="absolute inset-0 overflow-hidden">
         <HexagonShape
@@ -127,7 +127,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
+      <div className="relative z-10 container px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <motion.div
             custom={1}
@@ -160,7 +160,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" /> */}
     </div>
   );
 };

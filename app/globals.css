@@ -28,7 +28,6 @@
 body {
   background-color: #0D1117;
   font-family: var(--font-lora), serif;
-  color: #e2e8f0;
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
@@ -60,19 +59,8 @@ body::before {
   opacity: 0.15;
 }
 
-
 .description {
   font-size: 12px;
   margin-top: 5px;
   font-weight: normal;
-}
-
-.glassmorphism {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
