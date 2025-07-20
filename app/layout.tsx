@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Orbitron, Roboto, Space_Mono } from "next/font/google";
 import AnalyticsProvider from '@/components/AnalyticsProvider';
 import { Navbar } from "@/components/navbar";
+import Footer from "@/components/Footer";
 import "@/app/globals.css";
 
 const orbitron = Orbitron({
@@ -39,6 +40,7 @@ export default function RootLayout({
         <AnalyticsProvider>
           <Navbar/>
           {children}
+          <Footer />
         </AnalyticsProvider>
       </body>
     </html>
