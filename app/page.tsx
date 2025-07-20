@@ -7,15 +7,12 @@ import Footer from "@/components/Footer";
 export default function HomePage() {
   return (
     <div>
-      {/* Hero Section */}
       <Hero />
 
-      {/* Content Sections */}
       <Podcast />
       <Industry />
       <Academia />
 
-      {/* Footer */}
       <Footer />
     </div>
   );

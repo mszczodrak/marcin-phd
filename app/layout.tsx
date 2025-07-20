@@ -36,12 +36,10 @@ export default function RootLayout({
       <body
         className={`${orbitron.variable} ${roboto.variable} ${spaceMono.variable} font-sans antialiased`}
       >
-        <main className="container">
         <AnalyticsProvider>
           <Navbar/>
           {children}
         </AnalyticsProvider>
-        </main>
       </body>
     </html>
   );

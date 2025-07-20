@@ -13,14 +13,14 @@ export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="bg-zinc-800/80 border-gray-200">
+        <nav className="bg-transparent">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between p-4">
                 <Msz />
 
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
                     aria-controls="navbar-default"
                     aria-expanded={isMenuOpen}
                 >
@@ -47,12 +47,12 @@ export function Navbar() {
                     } w-full md:block md:w-auto`}
                     id="navbar-default"
                 >
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                         {links.map((link) => (
                             <li key={link.url} className="list-none">
                                 <Link
                                     href={link.url}
-                                    className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 no-underline"
+                                    className="block py-2 px-3 text-white rounded-sm hover:bg-transparent md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 no-underline"
                                 >
                                     {link.label}
                                 </Link>
