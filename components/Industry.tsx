@@ -40,13 +40,13 @@ const features = [
     title: "Google Hardware",
     description: "Nest Thermostat, 3rd Generation and version E.",
     image:
-      "/images/nest_thermostat_3.webp",
+      "/images/nest_thermostat_3_500x500.webp",
   },
   {
     title: "Essential",
     description: "New home operating system Ambient OS - the biggest thing since Android.",
     image:
-      "/images/essential_home.webp",
+      "/images/essential_home_481x300.webp",
   },
   {
     title: "Nest",

@@ -11,7 +11,7 @@ const Podcast = () => {
           <div className="md:col-span-1">
             <Link href="https://landmarklessons.com" target="_blank" rel="noopener noreferrer">
               <Image
-                src="/images/Landmark_Lessons_Icon_1.webp"
+                src="/images/Landmark_Lessons_logo_300x300.webp"
                 alt="Landmark Lessons Podcast Cover Art"
                 width={300}
                 height={300}
