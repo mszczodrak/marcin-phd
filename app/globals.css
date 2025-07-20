@@ -65,15 +65,14 @@ body::before {
   font-weight: normal;
 }
 
-.hover-gold-scale {
-  /* @apply text-white transition-all duration-200 ease-in-out hover:text-gold hover:scale-110; */
-  @apply text-white bg-transparent shadow-lg;
+.hover-lime-scale {
+  color: white;
+  transition: transform 0.3s ease;
+  transform-origin: left;
 }
 
-.hover-gold-scale:hover {
-  @apply text-lime-200 bg-transparent scale-105;
+.hover-lime-scale:hover {
+  color: lime;
+  /* transform: scale(1,1); */
+  @apply scale-105;
 }
-
-/* .hover-gold-scale:hover {
-  @apply text-white bg-transparent shadow-amber-500/40 scale-105;
-} */

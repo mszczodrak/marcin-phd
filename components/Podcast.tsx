@@ -21,7 +21,7 @@ const Podcast = () => {
           </div>
           <div className="md:col-span-2 text-white">
             <Link className="no-underline " href="https://landmarklessons.com" target="_blank" rel="noopener noreferrer">
-              <h3 className="text-4xl font-bold mb-4 hover-gold-scale">Landmark Lessons</h3>
+              <h3 className="text-4xl font-bold mb-4 hover-lime-scale">Landmark Lessons</h3>
             </Link>
             <p className="mb-6">
               Welcome to Landmark Lessons, the podcast that deconstructs the pivotal moments and influential people that define an entrepreneurial journey.
