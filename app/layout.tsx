@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Orbitron, Roboto, Space_Mono } from "next/font/google";
 import AnalyticsProvider from '@/components/AnalyticsProvider';
 import { Navbar } from "@/components/navbar";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/footer";
 import "@/app/globals.css";
 
 const orbitron = Orbitron({

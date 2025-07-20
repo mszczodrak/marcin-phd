@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Msz from "./Msz";
 
@@ -5,7 +7,7 @@ import { SocialIcon } from "./social-icon"
 import { XIcon } from "./icons/x-icon"
 import { LinkedInIcon } from "./icons/linkedin-icon"
 
-const Footer = () => {
+export function Footer() {
     const links = [
         { icon: LinkedInIcon, href: "https://www.linkedin.com/in/szczodrak/", label: "Home" },
         { icon: XIcon, href: "https://x.com/mszczodrak", label: "X" },
@@ -33,4 +35,3 @@ const Footer = () => {
     );
 };
 
-export default Footer;
