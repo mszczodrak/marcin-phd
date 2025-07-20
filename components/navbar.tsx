@@ -14,7 +14,7 @@ export function Navbar() {
 
     return (
         <nav className="bg-transparent">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between p-4">
+            <div className="max-w-screen-xl flex justify-between p-4 mx-auto">
                 <Msz />
 
                 <button
