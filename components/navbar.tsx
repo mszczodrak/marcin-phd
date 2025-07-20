@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import Msz from "./Msz";
 import Link from "next/link";
@@ -42,9 +43,8 @@ export function Navbar() {
                     </svg>
                 </button>
                 <div
-                    className={`${
-                        isMenuOpen ? "block" : "hidden"
-                    } w-full md:block md:w-auto`}
+                    className={`${isMenuOpen ? "block" : "hidden"
+                        } w-full md:block md:w-auto`}
                     id="navbar-default"
                 >
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">

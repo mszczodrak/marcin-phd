@@ -18,7 +18,7 @@ const Academia = () => {
             width={125}
             height={100}
             className="rounded-full"
- 
+
           />
         </div>
         <HoverEffect items={projects} />

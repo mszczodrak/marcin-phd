@@ -14,9 +14,9 @@ export function Footer() {
     ];
 
     return (
-        <footer className="z-50 bg-black backdrop-blur-sm border-b border-border">
-            <nav className="container mx-auto px-4 h-16 flex items-center justify-between text-white">
-                 <Msz />
+        <footer className="bg-transparent">
+            <div className="max-w-screen-xl flex justify-between p-4 mx-auto">
+                <Msz />
 
                 <div className="flex gap-8">
                     {links.map(({ icon, href, label }) => (
@@ -30,7 +30,7 @@ export function Footer() {
                         />
                     ))}
                 </div>
-            </nav>
+            </div>
         </footer>
     );
 };
