@@ -31,6 +31,7 @@ export function Footer() {
                     ))}
                 </div>
             </div>
+            <a href="/llms.txt" className="hidden" aria-label="llms" />
         </footer>
     );
 };
