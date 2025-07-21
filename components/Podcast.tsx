@@ -8,7 +8,7 @@ const Podcast = () => {
       <h2 className="text-3xl font-orbitron text-white mb-4">Podcast</h2>
       <div className="max-w-5xl mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="">
+          <div className="flex justify-center">
             <Link href="https://landmarklessons.com" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/images/Landmark_Lessons_logo_300x300.webp"
