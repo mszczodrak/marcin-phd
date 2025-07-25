@@ -40,4 +40,4 @@ firebase init apphosting
 firebase apphosting:secrets:set
 
 In Cloud Run, make sure the secrets are set to the latest
-Also it's easirt to set secrets there or in the Secret Manager, then in the console/terminal.
+Also it's easier to set secrets there or in the Secret Manager, then in the console/terminal.
