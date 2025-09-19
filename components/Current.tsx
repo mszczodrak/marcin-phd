@@ -1,6 +1,15 @@
 import Image from "next/image"
 import { FaSpotify, FaApple, FaYoutube, FaAmazon } from 'react-icons/fa';
 import Link from "next/link";
+import React from "react";
+import Autoplay from "embla-carousel-autoplay"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const Current = () => {
   return (
