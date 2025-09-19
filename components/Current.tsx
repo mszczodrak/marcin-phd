@@ -29,7 +29,7 @@ const currentProjects = [
   {
     title: "VoxQuery",
     description: "Query your data with your voice. An intuitive way to interact with your databases.",
-    image: "/images/file_audio_icon.webp",
+    image: "/images/file_audio_icon_white.webp",
     link: "https://voxquery.com",
   },
 ];
