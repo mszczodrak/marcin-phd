@@ -5,6 +5,7 @@ import Msz from "./Msz";
 import Link from "next/link";
 
 const links = [
+    { url: "/#current", label: "Current" },
     { url: "/#podcast", label: "Podcast" },
     { url: "/#industry", label: "Industry" },
     { url: "/#academia", label: "Academia" },
