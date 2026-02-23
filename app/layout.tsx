@@ -24,7 +24,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Marcin Szczodrak Homepage",
-  description: "msz.ai - Marcin Szczodrak's homepage about the construction, IoT, robotics, and AI.",
+  description: "marcin.phd - Marcin Szczodrak's homepage about the construction, IoT, robotics, and AI.",
 };
 
 export default function RootLayout({
@@ -38,7 +38,7 @@ export default function RootLayout({
         className={`${orbitron.variable} ${roboto.variable} ${spaceMono.variable} font-sans antialiased`}
       >
         <AnalyticsProvider>
-          <Navbar/>
+          <Navbar />
           {children}
           <Footer />
         </AnalyticsProvider>

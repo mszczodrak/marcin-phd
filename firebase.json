@@ -1,6 +1,6 @@
 {
   "apphosting": {
-    "backendId": "msz-ai",
+    "backendId": "marcin-phd",
     "rootDir": "/",
     "ignore": [
       "node_modules",
