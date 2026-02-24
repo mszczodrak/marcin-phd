@@ -23,9 +23,50 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Marcin Szczodrak Homepage",
+  metadataBase: new URL("https://marcin.phd"),
+  title: {
+    default: "Marcin Szczodrak | Homepage",
+    template: "%s | Marcin Szczodrak",
+  },
   description:
-    "marcin.phd - Marcin Szczodrak's homepage about the construction, IoT, robotics, and AI.",
+    "Marcin Szczodrak's homepage. Exploring the intersection of construction, IoT, robotics, and AI.",
+  keywords: [
+    "Marcin Szczodrak",
+    "Software Engineer",
+    "Robotics",
+    "IoT",
+    "Columbia University",
+    "AI",
+  ],
+  authors: [{ name: "Marcin Szczodrak", url: "https://marcin.phd" }],
+  creator: "Marcin Szczodrak",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://marcin.phd",
+    title: "Marcin Szczodrak | Homepage",
+    description:
+      "Passionate software engineer building innovative solutions in robotics, AI, and IoT.",
+    siteName: "Marcin Szczodrak",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marcin Szczodrak | Homepage",
+    description:
+      "Passionate software engineer building innovative solutions in robotics, AI, and IoT.",
+    creator: "@mszczodrak",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
