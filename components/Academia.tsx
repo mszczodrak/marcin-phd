@@ -6,12 +6,12 @@ import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/c
 
 const Academia = () => {
   return (
-    <section id="academia" className="bg-zinc-950 text-zinc-100 py-24 border-t border-zinc-900">
+    <section id="academia" className="bg-zinc-50 text-zinc-900 py-24 border-t border-zinc-200">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-zinc-100 mb-6">Academia</h2>
-          <div className="flex items-center gap-6 p-6 rounded-2xl border border-zinc-800/50 bg-zinc-900/30 w-fit">
-            <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border border-zinc-700">
+          <h2 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-zinc-900 mb-6">Academia</h2>
+          <div className="flex items-center gap-6 p-6 rounded-2xl border border-zinc-200 bg-white w-fit shadow-sm">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border border-zinc-200">
                 <Image
                     src="/images/columbia_university_logo_125x100.webp"
                     alt="Columbia University Logo"
@@ -20,10 +20,10 @@ const Academia = () => {
                 />
             </div>
             <div>
-                <p className="text-lg md:text-xl font-medium text-zinc-100">
+                <p className="text-lg md:text-xl font-medium text-zinc-900">
                     Ph.D. in Computer Science
                 </p>
-                <p className="text-zinc-400 font-light">
+                <p className="text-zinc-500 font-light">
                     Columbia University, NY
                 </p>
             </div>
@@ -37,9 +37,9 @@ const Academia = () => {
               href={project.link || "#"} 
               className={`group block h-full no-underline ${!project.link ? "pointer-events-none" : ""}`}
             >
-              <Card className="h-full bg-zinc-900/30 border-zinc-800/50 hover:bg-zinc-900/50 transition-colors duration-300 rounded-2xl overflow-hidden shadow-none">
+              <Card className="h-full bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-md transition-all duration-300 rounded-2xl overflow-hidden shadow-sm">
                 <CardContent className="p-6">
-                  <div className="bg-white/5 p-2 rounded-xl mb-6 aspect-video relative overflow-hidden">
+                  <div className="bg-zinc-50 p-2 rounded-xl mb-6 aspect-video relative overflow-hidden border border-zinc-100">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -47,8 +47,8 @@ const Academia = () => {
                       className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <CardTitle className="text-lg font-semibold text-zinc-100 mb-2">{project.title}</CardTitle>
-                  <CardDescription className="text-zinc-400 font-light text-sm leading-relaxed">
+                  <CardTitle className="text-lg font-semibold text-zinc-900 mb-2">{project.title}</CardTitle>
+                  <CardDescription className="text-zinc-600 font-light text-sm leading-relaxed">
                     {project.description}
                   </CardDescription>
                 </CardContent>
@@ -58,19 +58,19 @@ const Academia = () => {
         </div>
         
         <div className="mt-24">
-          <h3 className="text-2xl font-medium tracking-tight mb-8">Selected Publications</h3>
+          <h3 className="text-2xl font-medium tracking-tight mb-8 text-zinc-900">Selected Publications</h3>
           <ul className="space-y-8 max-w-4xl">
             {publications.map((pub, index) => (
-              <li key={index} className="group flex flex-col border-b border-zinc-800/50 pb-8 last:border-0">
-                <h4 className="text-lg font-medium text-zinc-200 mb-2 group-hover:text-zinc-50 transition-colors">{pub.title}</h4>
-                <p className="text-zinc-400 font-light text-sm mb-2">{pub.authors}</p>
-                <p className="text-xs text-zinc-500 uppercase tracking-wider mb-4">{pub.venue}</p>
+              <li key={index} className="group flex flex-col border-b border-zinc-200 pb-8 last:border-0">
+                <h4 className="text-lg font-medium text-zinc-800 mb-2 group-hover:text-zinc-900 transition-colors">{pub.title}</h4>
+                <p className="text-zinc-600 font-light text-sm mb-2">{pub.authors}</p>
+                <p className="text-xs text-zinc-400 uppercase tracking-wider mb-4">{pub.venue}</p>
                 <div className="flex gap-4 flex-wrap">
                   {pub.links.map((link, linkIndex) => (
                     <a
                       key={linkIndex}
                       href={link.url}
-                      className="text-sm font-medium text-zinc-500 hover:text-emerald-400 transition-colors flex items-center gap-1 no-underline"
+                      className="text-sm font-medium text-zinc-500 hover:text-indigo-600 transition-colors flex items-center gap-1 no-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

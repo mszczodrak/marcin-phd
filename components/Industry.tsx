@@ -11,18 +11,18 @@ const features: {
       title: "Distributed Intelligence",
       description: "The Nervous System of Autonomy. We architect the distributed communication layers for Humanoids, Swarms, and Connected Fleets.",
       visual: (
-        <div className="w-full h-full bg-zinc-950 p-6 font-mono text-xs md:text-sm leading-relaxed flex flex-col justify-center border border-zinc-800/50 rounded-xl shadow-inner">
+        <div className="w-full h-full bg-zinc-900 p-6 font-mono text-xs md:text-sm leading-relaxed flex flex-col justify-center border border-zinc-800/50 rounded-xl shadow-inner">
           <div className="flex gap-2 mb-4 opacity-50">
             <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
             <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
           </div>
-          <div className="text-zinc-400 space-y-1">
-            <div><span className="text-emerald-500 mr-2">{">"}</span>init_sequence --force</div>
-            <div><span className="text-emerald-500 mr-2">{">"}</span>checking bus contention... <span className="text-zinc-500">0.02ms</span></div>
-            <div><span className="text-emerald-500 mr-2">{">"}</span>syncing nodes [1..128]... <span className="text-emerald-400">OK</span></div>
-            <div><span className="text-emerald-500 mr-2">{">"}</span>latency check... <span className="text-emerald-400">PASS</span></div>
-            <div className="mt-2"><span className="text-emerald-500 mr-2">{">"}</span><span className="animate-pulse w-2 h-4 bg-emerald-500 inline-block align-middle"></span></div>
+          <div className="text-zinc-300 space-y-1">
+            <div><span className="text-emerald-400 mr-2">{">"}</span>init_sequence --force</div>
+            <div><span className="text-emerald-400 mr-2">{">"}</span>checking bus contention... <span className="text-zinc-500">0.02ms</span></div>
+            <div><span className="text-emerald-400 mr-2">{">"}</span>syncing nodes [1..128]... <span className="text-emerald-300">OK</span></div>
+            <div><span className="text-emerald-400 mr-2">{">"}</span>latency check... <span className="text-emerald-300">PASS</span></div>
+            <div className="mt-2"><span className="text-emerald-400 mr-2">{">"}</span><span className="animate-pulse w-2 h-4 bg-emerald-400 inline-block align-middle"></span></div>
           </div>
         </div>
       ),
@@ -71,26 +71,26 @@ const features: {
 
 const Industry = () => {
   return (
-    <section id="industry" className="bg-zinc-950 text-zinc-100 py-24 border-t border-zinc-900">
+    <section id="industry" className="bg-white text-zinc-900 py-24 border-t border-zinc-100">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-zinc-100">Industry Experience</h2>
-          <p className="text-zinc-400 mt-4 max-w-2xl text-lg font-light">
+          <h2 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-zinc-900">Industry Experience</h2>
+          <p className="text-zinc-500 mt-4 max-w-2xl text-lg font-light">
             A track record of building impactful software and hardware solutions at leading technology companies.
           </p>
         </div>
         
         <div className="grid gap-12">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-zinc-900/30 border border-zinc-800/50 shadow-none hover:bg-zinc-900/50 transition-colors duration-300 rounded-2xl overflow-hidden">
+            <Card key={index} className="bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-2xl overflow-hidden">
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-2 gap-8 items-stretch h-full min-h-[300px]">
                   <div className={`p-8 md:p-12 flex flex-col justify-center space-y-4 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                    <h3 className="text-2xl font-semibold text-zinc-100 tracking-tight">{feature.title}</h3>
-                    <p className="text-zinc-400 text-base leading-relaxed font-light">{feature.description}</p>
+                    <h3 className="text-2xl font-semibold text-zinc-900 tracking-tight">{feature.title}</h3>
+                    <p className="text-zinc-600 text-base leading-relaxed font-light">{feature.description}</p>
                   </div>
-                  <div className={`${index % 2 === 1 ? "md:order-1" : ""} bg-zinc-900/50 flex items-center justify-center p-6 md:p-8`}>
-                    <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-sm">
+                  <div className={`${index % 2 === 1 ? "md:order-1" : ""} bg-zinc-50 flex items-center justify-center p-6 md:p-8`}>
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-sm border border-zinc-200">
                       {feature.visual ? (
                         feature.visual
                       ) : (

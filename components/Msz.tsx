@@ -5,7 +5,7 @@ const Msz = () => {
         <div>
             <Link
                 href="/"
-                className="text-xl font-medium font-sans text-zinc-100 hover:text-zinc-400 transition-colors duration-300 tracking-tight no-underline"
+                className="text-xl font-medium font-sans text-zinc-900 hover:text-zinc-600 transition-colors duration-300 tracking-tight no-underline"
             >
                 marcin.phd
             </Link>

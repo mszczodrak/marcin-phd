@@ -14,7 +14,7 @@ export function Footer() {
     ];
 
     return (
-        <footer className="bg-zinc-950 border-t border-zinc-900 py-12">
+        <footer className="bg-white border-t border-zinc-200 py-12">
             <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-between gap-6">
                 <Msz />
 
@@ -26,7 +26,7 @@ export function Footer() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={label}
-                            icon={React.createElement(icon, { className: "w-5 h-5 text-zinc-400 hover:text-zinc-100 transition-colors" })}
+                            icon={React.createElement(icon, { className: "w-5 h-5 text-zinc-400 hover:text-zinc-900 transition-colors" })}
                         />
                     ))}
                 </div>
