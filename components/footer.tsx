@@ -14,8 +14,8 @@ export function Footer() {
     ];
 
     return (
-        <footer className="bg-transparent">
-            <div className="max-w-screen-xl flex justify-between p-4 mx-auto">
+        <footer className="bg-zinc-950 border-t border-zinc-900 py-12">
+            <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-between gap-6">
                 <Msz />
 
                 <div className="flex gap-8">
@@ -26,13 +26,15 @@ export function Footer() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={label}
-                            icon={React.createElement(icon, { className: "w-6 h-6" })}
+                            icon={React.createElement(icon, { className: "w-5 h-5 text-zinc-400 hover:text-zinc-100 transition-colors" })}
                         />
                     ))}
                 </div>
+            </div>
+            <div className="container mx-auto px-6 md:px-12 lg:px-24 mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-zinc-500 font-light">
+                <p>&copy; {new Date().getFullYear()} Marcin Szczodrak. All rights reserved.</p>
             </div>
             <a href="/llms.txt" className="hidden" aria-label="llms" />
         </footer>
     );
 };
-

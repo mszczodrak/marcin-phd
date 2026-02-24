@@ -1,59 +1,53 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Msz from "./Msz";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 const links = [
-    // { url: "/#current", label: "Current" },
-    // { url: "/#podcast", label: "Podcast" },
     { url: "/#industry", label: "Industry" },
     { url: "/#academia", label: "Academia" },
 ];
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <nav className="bg-transparent">
-            <div className="max-w-screen-xl flex justify-between p-4 mx-auto">
+        <nav className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50 py-3" : "bg-transparent py-5"}`}>
+            <div className="container mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between">
                 <Msz />
 
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    className="inline-flex items-center p-2 text-zinc-400 md:hidden hover:text-zinc-100 transition-colors focus:outline-none"
                     aria-controls="navbar-default"
                     aria-expanded={isMenuOpen}
                 >
                     <span className="sr-only">Open main menu</span>
-                    <svg
-                        className="w-5 h-5"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 17 14"
-                    >
-                        <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M1 1h15M1 7h15M1 13h15"
-                        />
-                    </svg>
+                    {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
                 <div
-                    className={`${isMenuOpen ? "block" : "hidden"
-                        } w-full md:block md:w-auto`}
+                    className={`${isMenuOpen ? "block absolute top-full left-0 w-full bg-zinc-950 border-b border-zinc-800/50 py-4 px-6" : "hidden"} md:block md:static md:w-auto md:bg-transparent md:p-0 md:border-none`}
                     id="navbar-default"
                 >
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <ul className="flex flex-col gap-6 md:flex-row md:items-center md:gap-8">
                         {links.map((link) => (
-                            <li key={link.url} className="list-none">
+                            <li key={link.url}>
                                 <Link
                                     href={link.url}
-                                    className="block py-2 px-3 text-white rounded-sm md:border-0 hover-lime-scale md:p-0 no-underline"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
                                 >
                                     {link.label}
                                 </Link>
