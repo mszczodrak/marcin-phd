@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Orbitron, Roboto, Space_Mono } from "next/font/google";
-import AnalyticsProvider from '@/components/AnalyticsProvider';
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import "@/app/globals.css";
 
 const orbitron = Orbitron({
@@ -24,7 +24,8 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Marcin Szczodrak Homepage",
-  description: "marcin.phd - Marcin Szczodrak's homepage about the construction, IoT, robotics, and AI.",
+  description:
+    "marcin.phd - Marcin Szczodrak's homepage about the construction, IoT, robotics, and AI.",
 };
 
 export default function RootLayout({

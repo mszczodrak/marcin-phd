@@ -1,11 +1,13 @@
-import { Suspense, type ReactNode } from 'react';
-import { FirebaseAnalyticsWatcher } from './FirebaseAnalyticsWatcher';
+import { Suspense, type ReactNode } from "react";
+import { FirebaseAnalyticsWatcher } from "./FirebaseAnalyticsWatcher";
 
 type AnalyticsProviderProps = {
   children: ReactNode;
 };
 
-export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+export default function AnalyticsProvider({
+  children,
+}: AnalyticsProviderProps) {
   return (
     <>
       <Suspense>

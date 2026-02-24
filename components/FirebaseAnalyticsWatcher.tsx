@@ -1,41 +1,40 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { getAnalyticsInstance } from '@/lib/firebase';
-import { logEvent, type Analytics } from 'firebase/analytics';
+import { useEffect, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { getAnalyticsInstance } from "@/lib/firebase";
+import { logEvent, type Analytics } from "firebase/analytics";
 
 export function FirebaseAnalyticsWatcher() {
-    const pathname = usePathname();
-    const searchParams = useSearchParams();
-    
-    // State to hold the analytics instance
-    const [analytics, setAnalytics] = useState<Analytics | null>(null);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-    // Effect to initialize Analytics once on component mount
-    useEffect(() => {
-        const initialize = async () => {
-            const instance = await getAnalyticsInstance();
-            setAnalytics(instance);
-        };
+  // State to hold the analytics instance
+  const [analytics, setAnalytics] = useState<Analytics | null>(null);
 
-        initialize();
-    }, []); // Empty dependency array ensures this runs only once
+  // Effect to initialize Analytics once on component mount
+  useEffect(() => {
+    const initialize = async () => {
+      const instance = await getAnalyticsInstance();
+      setAnalytics(instance);
+    };
 
-    // Effect to log page_view when path or analytics instance changes
-    useEffect(() => {
-        // Don't log until analytics is initialized
-        if (!analytics) {
-            return;
-        }
+    initialize();
+  }, []); // Empty dependency array ensures this runs only once
 
-        const url = pathname + (searchParams?.toString() ? `?${searchParams}` : '');
-        
-        logEvent(analytics, 'page_view', {
-            page_location: url,
-        });
+  // Effect to log page_view when path or analytics instance changes
+  useEffect(() => {
+    // Don't log until analytics is initialized
+    if (!analytics) {
+      return;
+    }
 
-    }, [pathname, searchParams, analytics]); // Re-run when these change
+    const url = pathname + (searchParams?.toString() ? `?${searchParams}` : "");
 
-    return null;
+    logEvent(analytics, "page_view", {
+      page_location: url,
+    });
+  }, [pathname, searchParams, analytics]); // Re-run when these change
+
+  return null;
 }
