@@ -23,7 +23,7 @@ const Academia = () => {
           <div className="flex items-center gap-6 p-6 rounded-2xl border border-zinc-200 bg-white w-fit shadow-sm">
             <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border border-zinc-200">
               <Image
-                src="/images/columbia_university_logo_125x100.webp"
+                src="/images/columbia_university_logo_125x100.avif"
                 alt="Columbia University Logo"
                 fill
                 className="object-cover"
@@ -120,42 +120,42 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Fennec Fox",
-    image: "/images/fennec_stack_states.webp",
+    image: "/images/fennec_stack_states.avif",
     description:
       "Fennec Fox is a platform for low-power wireless embedded devices requiring dynamic network reconfiguration and communication service adaption. The platform consists of a four-layer network protocol stack, where at runtime various library modules may support each layer service.",
     link: "https://github.com/mszczodrak/fennec-fox/wiki",
   },
   {
     title: "Swift Fox",
-    image: "/images/swift_fox_arch_small.webp",
+    image: "/images/swift_fox_arch_small.avif",
     description:
       "Swift Fox is a programming language for runtime dynamic network reconfiguration of low-power wireless network running on the Fennec Fox platform. The compiler is written in C using Flex and Bison, generating nesC code.",
     link: "https://github.com/mszczodrak/swift-fox/wiki",
   },
   {
     title: "Hardware-Software-Network Codesign",
-    image: "/images/hw_sw_net.webp",
+    image: "/images/hw_sw_net.avif",
     description:
       "Introduces a new development environment for wireless embedded devices consisting of a hardware platform simulator, embedded software, and wireless communication. Supports standalone simulation and hardware-in-the-loop testbed modes.",
     link: "",
   },
   {
     title: "GOALI Project",
-    image: "/images/goali_idea_small.webp",
+    image: "/images/goali_idea_small.avif",
     description:
       "NSF sponsored project researching methods for network-enabled embedded monitoring and control for high-performance buildings, focusing on centralized and distributed occupancy estimation algorithms.",
     link: "",
   },
   {
     title: "Open Testbed Framework",
-    image: "/images/testbed_user.webp",
+    image: "/images/testbed_user.avif",
     description:
       "The Open Testbed Framework (OTF) provides tools for rapid deployment of Low-Power Wireless Network (LPWN) testbeds, supporting Wireless Sensor Networks and Cyber-Physical Systems.",
     link: "https://github.com/mszczodrak/otf/wiki",
   },
   {
     title: "EnHANTs",
-    image: "/images/enhants.webp",
+    image: "/images/enhants.avif",
     description:
       "Energy-Harvesting Active Networked Tags are small, flexible, and energetically self-reliant devices attachable to objects traditionally not networked, providing infrastructure for novel tracking applications.",
     link: "https://enhants.ee.columbia.edu/",

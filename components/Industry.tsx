@@ -19,48 +19,48 @@ const features: Feature[] = [
     title: "Figure AI",
     description:
       "Started company's software development infrastructure from scratch and designed the first version of the Humanoid Management Systems.",
-    image: "/images/Figure_02_Web.webp",
+    image: "/images/Figure_02_Web.avif",
   },
   {
     title: "Tesla",
     description:
       "Accelerated transition to sustainable energy with industrial (Megapack) and residential (Powerwall) energy storage products as well as wireless vehicle charging.",
-    image: "/images/tesla_projects.jpeg",
+    image: "/images/tesla_projects.avif",
   },
   {
     title: "Google Brain Robotics",
     description:
       "Robots playing ping pong, Reinforcement Learning with Model Predictive Control and robotics teleoperation.",
-    image: "/images/google_brain_ping_pong.webp",
+    image: "/images/google_brain_ping_pong.avif",
   },
   {
     title: "Google X (now Intrinsic)",
     description:
       "AI meets Industry 4.0. Building the future of manufacturing with AI and robotics.",
-    image: "/images/google_x_instrinsic.webp",
+    image: "/images/google_x_instrinsic.avif",
   },
   {
     title: "Google Hardware",
     description: "Nest Thermostat, 3rd Generation and version E.",
-    image: "/images/nest_thermostat_3_500x500.webp",
+    image: "/images/nest_thermostat_3_500x500.avif",
   },
   {
     title: "Essential",
     description:
       "New home operating system Ambient OS - the biggest thing since Android.",
-    image: "/images/essential_home_481x300.webp",
+    image: "/images/essential_home_481x300.avif",
   },
   {
     title: "Nest",
     description:
       "Building a conscious home that takes care of people inside and the surrounding environment. Nest Learning Thermostat, Nest Protect, Nest Security and network protocols for smart home: Thread and Weave.",
-    image: "/images/nest_home_security.webp",
+    image: "/images/nest_home_security.avif",
   },
   {
     title: "Philips",
     description:
       "Helping to build the future of smart city with outdoor lighting products.",
-    image: "/images/philips_lighting.jpg",
+    image: "/images/philips_lighting.avif",
   },
 ];
 
