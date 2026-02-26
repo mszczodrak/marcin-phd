@@ -10,40 +10,10 @@ export interface Feature {
 
 const features: Feature[] = [
   {
-    title: "Distributed Intelligence",
+    title: "Refract Systems",
     description:
-      "The Nervous System of Autonomy. We architect the distributed communication layers for Humanoids, Swarms, and Connected Fleets.",
-    visual: (
-      <div className="w-full h-full bg-zinc-900 p-6 font-mono text-xs md:text-sm leading-relaxed flex flex-col justify-center border border-zinc-800/50 rounded-xl shadow-inner">
-        <div className="flex gap-2 mb-4 opacity-50">
-          <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
-          <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
-          <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
-        </div>
-        <div className="text-zinc-300 space-y-1">
-          <div>
-            <span className="text-emerald-400 mr-2">{">"}</span>init_sequence
-            --force
-          </div>
-          <div>
-            <span className="text-emerald-400 mr-2">{">"}</span>checking bus
-            contention... <span className="text-zinc-500">0.02ms</span>
-          </div>
-          <div>
-            <span className="text-emerald-400 mr-2">{">"}</span>syncing nodes
-            [1..128]... <span className="text-emerald-300">OK</span>
-          </div>
-          <div>
-            <span className="text-emerald-400 mr-2">{">"}</span>latency check...{" "}
-            <span className="text-emerald-300">PASS</span>
-          </div>
-          <div className="mt-2">
-            <span className="text-emerald-400 mr-2">{">"}</span>
-            <span className="animate-pulse w-2 h-4 bg-emerald-400 inline-block align-middle"></span>
-          </div>
-        </div>
-      </div>
-    ),
+      "A cyber-physical simulation platform that accelerates embedded systems development through a deterministic 'Shift-Left' digital twin architecture for firmware execution.",
+    image: "/images/firmware_studio_square.webp",
   },
   {
     title: "Figure AI",

@@ -1,13 +1,13 @@
 # Marcin Szczodrak | Deep Tech Founder & Systems Architect
 
-Updated July 20, 2025
+Updated February 26, 2026
 
 ## Contact Information
 
 * **Email**: contact@marcin.phd 
 * **LinkedIn**: www.linkedin.com/in/szczodrak 
 * **Personal Website**: https://marcin.phd
-* **Company Website**: https://hamster.works
+* **Company Website**: https://refractsystems.com/
 * **Podcast Website**: https://landmarklessons.com
 * **Location**: Santa Clara, California, United States 
 
@@ -48,14 +48,15 @@ learning models and large-scale cloud services.
 
 Szczodrak's experience spans across several high-profile technology companies and his own entrepreneurial venture:
 
-### Hamster Works | Santa Clara, CA
-**Founder** (January 2023 - Present)
+### Refract Systems | Santa Clara, CA
+**Founder & CEO** (January 2023 - Present)
 
-As the Founder, Szczodrak established a Research & Development Lab focused on creating tools for embedded software. He single-handedly developed "Firmware Studio," a cloud-based simulation platform for microcontroller hardware. 
+Refract Systems is a cyber-physical simulation platform that accelerates embedded systems development by enabling a deterministic, "Shift-Left" digital twin architecture. 
 
-* Founded a cutting-edge Research & Development Lab dedicated to creating innovative tools for building, maintaining, and fixing embedded software on microcontrollers.
-* Launched Firmware Studio, a groundbreaking cloud-based platform for simulating microcontroller hardware.
-* Firmware Studio provides a comprehensive digital twin of entire systems, empowering companies in automotive, defense, space, and IoT to streamline development, accelerate time-to-market, and improve product quality.
+* Developed "Firmware Studio," a cloud-based platform that tightly couples cycle-accurate instruction-set emulators (QEMU) with external physical plant models in Python or Rust.
+* Utilizes the vfio-user protocol over UNIX sockets to achieve precise Memory Mapped IO (MMIO) and timing synchronization between firmware and physical models.
+* Enables engineering teams to conduct rigorous Design Space Exploration (DSE) and optimize compute power, bill of materials (BOM), and physical AI integration before manufacturing.
+* Empowering companies in automotive, defense, space, and IoT to streamline development and improve product quality.
 
 ### Figure | Sunnyvale, CA
 **Staff Software Engineer** (August 2022 - December 2022)
