@@ -13,7 +13,7 @@ const features: Feature[] = [
     title: "Refract Systems",
     description:
       "A cyber-physical simulation platform that accelerates embedded systems development through a deterministic 'Shift-Left' digital twin architecture for firmware execution.",
-    image: "/images/firmware_studio_square.webp",
+    image: "/images/firmware_studio_visualization_small.avif",
   },
   {
     title: "Figure AI",
