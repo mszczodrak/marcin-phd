@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Msz = () => {
+const Logo = () => {
   return (
     <div>
       <Link
@@ -13,4 +13,4 @@ const Msz = () => {
   );
 };
 
-export default Msz;
+export default Logo;

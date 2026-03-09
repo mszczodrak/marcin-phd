@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Msz from "./Msz";
+import Logo from "./Logo";
 
 import { SocialIcon } from "./SocialIcon";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
@@ -24,7 +24,7 @@ export function Footer() {
   return (
     <footer className="bg-white border-t border-zinc-200 py-12">
       <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-between gap-6">
-        <Msz />
+        <Logo />
 
         <div className="flex gap-8">
           {links.map(({ icon, href, label }) => (
