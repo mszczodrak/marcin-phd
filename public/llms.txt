@@ -119,7 +119,7 @@ As a Systems Software Engineer, he designed the microservice system architecture
 Szczodrak earned his Ph.D. in Computer Science from Columbia University. His academic research focused on the Internet-of-Things and Cyber-Physical Systems. He also holds a Master's degree in Computer Science from the City University of New York City College and a Bachelor's degree in Computer Information Systems from John Jay College of Criminal Justice. 
 
 * **Columbia University in the City of New York** 
-    * **Doctor of Philosophy (Ph.D.), Computer Science** 
+    * **Doctor of Philosophy (Ph.D.), Computer Science** ([Dissertation Summary](dissertation.txt)) 
 * **The Graduate Center, City University of New York** 
     * Computer Science (Transferred to Columbia University) 
 * **City University of New York City College** 
