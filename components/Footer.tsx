@@ -4,20 +4,18 @@ import React from "react";
 import Msz from "./Msz";
 
 import { SocialIcon } from "./SocialIcon";
-import { XIcon } from "./icons/XIcon";
-import { LinkedInIcon } from "./icons/LinkedinIcon";
-import { GithubIcon } from "./icons/GithubIcon";
+import { Twitter, Linkedin, Github } from "lucide-react";
 
 export function Footer() {
   const links = [
     {
-      icon: LinkedInIcon,
+      icon: Linkedin,
       href: "https://www.linkedin.com/in/szczodrak/",
       label: "LinkedIn",
     },
-    { icon: XIcon, href: "https://x.com/mszczodrak", label: "X" },
+    { icon: Twitter, href: "https://x.com/mszczodrak", label: "X" },
     {
-      icon: GithubIcon,
+      icon: Github,
       href: "https://github.com/mszczodrak",
       label: "GitHub",
     },
