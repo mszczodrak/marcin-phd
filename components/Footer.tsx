@@ -28,17 +28,7 @@ export function Footer() {
 
         <div className="flex gap-8">
           {links.map(({ icon, href, label }) => (
-            <SocialIcon
-              key={href}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              icon={React.createElement(icon, {
-                className:
-                  "w-5 h-5 text-zinc-400 hover:text-zinc-900 transition-colors",
-              })}
-            />
+            <SocialIcon key={href} href={href} aria-label={label} icon={icon} />
           ))}
         </div>
       </div>

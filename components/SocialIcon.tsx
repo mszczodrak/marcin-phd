@@ -1,29 +1,26 @@
 import type React from "react";
+import type { LucideIcon } from "lucide-react";
 
 interface SocialIconProps {
   href: string;
   "aria-label": string;
-  icon: React.ReactNode;
-  target?: string;
-  rel?: string;
+  icon: LucideIcon;
 }
 
 export function SocialIcon({
   href,
   "aria-label": ariaLabel,
-  icon,
-  target,
-  rel,
+  icon: Icon,
 }: SocialIconProps) {
   return (
     <a
       href={href}
       aria-label={ariaLabel}
-      target={target}
-      rel={rel}
+      target="_blank"
+      rel="noopener noreferrer"
       className="text-zinc-400 hover:text-zinc-900 transition-all duration-300 ease-in-out transform hover:scale-110"
     >
-      {icon}
+      <Icon className="w-5 h-5 transition-colors" />
     </a>
   );
 }
