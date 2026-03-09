@@ -6,15 +6,21 @@ import Msz from "./Msz";
 import { SocialIcon } from "./SocialIcon";
 import { XIcon } from "./icons/XIcon";
 import { LinkedInIcon } from "./icons/LinkedinIcon";
+import { GithubIcon } from "./icons/GithubIcon";
 
 export function Footer() {
   const links = [
     {
       icon: LinkedInIcon,
       href: "https://www.linkedin.com/in/szczodrak/",
-      label: "Home",
+      label: "LinkedIn",
     },
     { icon: XIcon, href: "https://x.com/mszczodrak", label: "X" },
+    {
+      icon: GithubIcon,
+      href: "https://github.com/mszczodrak",
+      label: "GitHub",
+    },
   ];
 
   return (

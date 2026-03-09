@@ -6,6 +6,7 @@ Updated February 26, 2026
 
 * **Email**: contact@marcin.phd 
 * **LinkedIn**: www.linkedin.com/in/szczodrak 
+* **GitHub**: https://github.com/mszczodrak
 * **Personal Website**: https://marcin.phd
 * **Company Website**: https://refractsystems.com/
 * **Podcast Website**: https://landmarklessons.com
