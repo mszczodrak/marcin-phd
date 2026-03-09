@@ -33,5 +33,11 @@
     "prettier": "^3.8.1",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "description": "Personal homepage and portfolio of Marcin Szczodrak",
+  "author": "Marcin Szczodrak <msz@msz.ai>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mszczodrak/marcin-phd.git"
   }
 }

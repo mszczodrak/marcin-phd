@@ -1,43 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marcin Szczodrak | Personal Portfolio
 
-## Getting Started
+This repository contains the source code for the personal homepage and portfolio of Marcin Szczodrak, a Deep Tech Founder and Systems Architect.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+- **Deployment:** Firebase App Hosting
+
+## 💻 Local Development
+
+1. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## ☁️ Deployment
+
+This project is deployed using [Firebase App Hosting](https://firebase.google.com/docs/app-hosting).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Firebase
-
-Use Firebase 'App Hosting'
-
-
+# Initialize Firebase App Hosting
 firebase init apphosting
 
-
+# Manage secrets
 firebase apphosting:secrets:set
+```
 
-In Cloud Run, make sure the secrets are set to the latest
-Also it's easier to set secrets there or in the Secret Manager, then in the console/terminal.
+_Note: In Cloud Run, ensure secrets are set to the latest version. It is often easier to configure secrets in the Google Cloud Secret Manager or Cloud Run console._
