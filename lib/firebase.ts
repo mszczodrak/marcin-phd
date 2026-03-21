@@ -1,25 +1,44 @@
 import { initializeApp, getApps, FirebaseApp } from "firebase/app";
 import { getAnalytics, isSupported, Analytics } from "firebase/analytics";
+import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-};
+let app: FirebaseApp | undefined;
 
-let app: FirebaseApp;
+if (typeof window !== 'undefined' || getApps().length === 0) {
+  if (getApps().length === 0) {
+    try {
+      // 1. Firebase App Hosting Automatic Initialization
+      app = initializeApp();
+      console.log("🔥 Initialized Firebase with App Hosting automatic configuration.");
+    } catch {
+      console.error("⚠️ Failed to initialize Firebase automatically. Ensure this is running in Firebase App Hosting.");
+    }
+  } else {
+    // Reuse existing app instance (for hot-reloading)
+    console.log("♻️ Reusing existing Firebase app instance.");
+    app = getApps()[0];
+  }
 
-if (getApps().length === 0) {
-  console.log("🔥 Initializing Firebase with environment variables...");
-  app = initializeApp(firebaseConfig);
-} else {
-  // Reuse existing app instance (for hot-reloading)
-  console.log("♻️ Reusing existing Firebase app instance.");
-  app = getApps()[0];
+  // Initialize Firebase App Check
+  // Uses the environment variable in production, falls back to the hardcoded public key locally.
+  const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LdXCY8sAAAAAJvXvg2Y5Hdp8GgRdeu_-ecRpibg';
+  
+  if (app && RECAPTCHA_SITE_KEY) {
+    if (process.env.NODE_ENV !== 'production' && typeof self !== 'undefined') {
+      // Enable the App Check debug token in local development
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (self as any).FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+    }
+    try {
+      initializeAppCheck(app, {
+        provider: new ReCaptchaV3Provider(RECAPTCHA_SITE_KEY),
+        isTokenAutoRefreshEnabled: true
+      });
+      console.log("🛡️ Firebase App Check initialized.");
+    } catch (err) {
+      console.error("❌ Failed to initialize Firebase App Check:", err);
+    }
+  }
 }
 
 // Analytics instance cache
@@ -35,16 +54,23 @@ export const getAnalyticsInstance = async () => {
     return analyticsInstance;
   }
 
+  if (!app) {
+    return null;
+  }
+
   if (typeof window !== 'undefined') {
-    const isSupportedResult = await isSupported();
-    if (isSupportedResult) {
-      console.log("✅ Firebase Analytics is supported and has been initialized.");
-      analyticsInstance = getAnalytics(app);
-      return analyticsInstance;
+    try {
+      const isSupportedResult = await isSupported();
+      if (isSupportedResult) {
+        console.log("✅ Firebase Analytics is supported and has been initialized.");
+        analyticsInstance = getAnalytics(app);
+        return analyticsInstance;
+      }
+    } catch (err) {
+      console.error("❌ Failed to initialize Firebase Analytics:", err);
     }
   }
 
-  console.log("❌ Firebase Analytics is not supported in this environment.");
   return null;
 };
 
