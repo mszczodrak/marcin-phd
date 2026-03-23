@@ -21,8 +21,12 @@ if (typeof window !== 'undefined' || getApps().length === 0) {
 
   // Initialize Firebase App Check
   // Uses the environment variable in production, falls back to the hardcoded public key locally.
-  const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LdXCY8sAAAAAJvXvg2Y5Hdp8GgRdeu_-ecRpibg';
-  
+  const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  if (!RECAPTCHA_SITE_KEY) {
+    console.warn("⚠️ NEXT_PUBLIC_RECAPTCHA_SITE_KEY is not defined. Firebase App Check will not be initialized.");
+  }
+
   if (app && RECAPTCHA_SITE_KEY) {
     if (process.env.NODE_ENV !== 'production' && typeof self !== 'undefined') {
       // Enable the App Check debug token in local development
