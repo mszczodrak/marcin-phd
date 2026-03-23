@@ -23,4 +23,4 @@ runConfig:
   #   secret: mySecretRef
 env:
   - variable: NEXT_PUBLIC_RECAPTCHA_SITE_KEY
-    value: 6LfwZpIsAAAAACA7fncB7zhBoGNUB0mXl9cxuu90
+    value: 6LdJeJIsAAAAAMAg-1NOBnW9C2H4-6fcJmSIfE3f
