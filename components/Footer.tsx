@@ -5,6 +5,7 @@ import Logo from "./Logo";
 
 import { SocialIcon } from "./SocialIcon";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
+import { SiSubstack, SiBluesky } from "react-icons/si";
 
 export function Footer() {
   const links = [
@@ -18,6 +19,16 @@ export function Footer() {
       icon: FaGithub,
       href: "https://github.com/mszczodrak",
       label: "GitHub",
+    },
+    {
+      icon: SiSubstack,
+      href: "https://substack.com/@mszczodrak",
+      label: "Substack",
+    },
+    {
+      icon: SiBluesky,
+      href: "https://bsky.app/profile/mszczodrak.bsky.social",
+      label: "Bluesky",
     },
   ];
 
