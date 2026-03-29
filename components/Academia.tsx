@@ -26,6 +26,7 @@ const Academia = () => {
                 src="/images/columbia_university_logo_125x100.avif"
                 alt="Columbia University Logo"
                 fill
+                sizes="64px"
                 className="object-cover"
               />
             </div>
@@ -54,6 +55,7 @@ const Academia = () => {
                       src={project.image}
                       alt={project.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

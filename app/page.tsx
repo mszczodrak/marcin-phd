@@ -1,13 +1,13 @@
-import Hero from "../components/Hero";
-import Industry from "../components/Industry";
-import Academia from "../components/Academia";
+import Hero from "@/components/Hero";
+import Industry from "@/components/Industry";
+import Academia from "@/components/Academia";
 
 export default function HomePage() {
   return (
-    <div>
+    <main>
       <Hero />
       <Industry />
       <Academia />
-    </div>
+    </main>
   );
 }

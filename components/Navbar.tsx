@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 const links = [
   { url: "/#industry", label: "Industry" },
   { url: "/#academia", label: "Academia" },
+  { url: "https://substack.com/@mszczodrak", label: "Blog" },
 ];
 
 export function Navbar() {
