@@ -39,3 +39,9 @@ firebase apphosting:secrets:set
 ```
 
 _Note: In Cloud Run, ensure secrets are set to the latest version. It is often easier to configure secrets in the Google Cloud Secret Manager or Cloud Run console._
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE). 
+
+*Note: While the source code is MIT licensed, the personal information, photographs, and specific branding remain the property of Marcin Szczodrak and should not be reused or misrepresented if you fork or clone this repository.*
