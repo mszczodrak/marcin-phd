@@ -121,4 +121,4 @@ const Industry = () => {
 };
 
 export default Industry;
- Industry;
+

@@ -2,6 +2,46 @@
 
 import { useEffect, useRef } from 'react';
 
+// Plexus Settings
+const speed = 0.2;
+const colors = {
+  particle: 'rgba(113, 113, 122, 0.2)', // zinc-500 with low opacity
+  line: 'rgba(113, 113, 122, 0.08)',    // zinc-500 with very low opacity
+};
+
+class Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+
+  constructor(width: number, height: number) {
+    this.x = Math.random() * width;
+    this.y = Math.random() * height;
+    this.vx = (Math.random() - 0.5) * speed;
+    this.vy = (Math.random() - 0.5) * speed;
+    this.size = Math.random() * 1 + 0.5;
+  }
+
+  update(width: number, height: number) {
+    this.x += this.vx;
+    this.y += this.vy;
+
+    if (this.x < 0) this.x = width;
+    if (this.x > width) this.x = 0;
+    if (this.y < 0) this.y = height;
+    if (this.y > height) this.y = 0;
+  }
+
+  draw(ctx: CanvasRenderingContext2D) {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = colors.particle;
+    ctx.fill();
+  }
+}
+
 export default function ScientificBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -19,46 +59,7 @@ export default function ScientificBackground() {
     const gridSize = 50;
     const gridColor = 'rgba(212, 212, 216, 0.15)'; // zinc-300 with very low opacity
 
-    // Plexus Settings
-    const colors = {
-      particle: 'rgba(113, 113, 122, 0.2)', // zinc-500 with low opacity
-      line: 'rgba(113, 113, 122, 0.08)',    // zinc-500 with very low opacity
-    };
     const connectionDistance = 200;
-    const speed = 0.2;
-
-    class Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-
-      constructor(width: number, height: number) {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * speed;
-        this.vy = (Math.random() - 0.5) * speed;
-        this.size = Math.random() * 1 + 0.5;
-      }
-
-      update(width: number, height: number) {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        if (this.x < 0) this.x = width;
-        if (this.x > width) this.x = 0;
-        if (this.y < 0) this.y = height;
-        if (this.y > height) this.y = 0;
-      }
-
-      draw(ctx: CanvasRenderingContext2D) {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = colors.particle;
-        ctx.fill();
-      }
-    }
 
     const init = () => {
       canvas.width = window.innerWidth;
