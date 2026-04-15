@@ -18,7 +18,7 @@ const Academia = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-zinc-900 mb-6">
-            Academia
+            Foundational Research
           </h2>
           <div className="flex items-center gap-6 p-6 rounded-2xl border border-zinc-200 bg-white w-fit shadow-sm">
             <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border border-zinc-200">

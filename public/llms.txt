@@ -1,174 +1,53 @@
-# Marcin Szczodrak | Deep Tech Founder & Systems Architect
+# Marcin Szczodrak | CEO & Founder | Deep Tech Systems Architect
 
-Updated February 26, 2026
+Updated April 15, 2026
 
 ## Contact Information
 
 * **Email**: contact@marcin.phd 
-* **LinkedIn**: www.linkedin.com/in/szczodrak 
-* **GitHub**: https://github.com/mszczodrak
-* **Personal Website**: https://marcin.phd
-* **Company Website**: https://refractsystems.com/
-* **Podcast Website**: https://landmarklessons.com
+* **LinkedIn**: [linkedin.com/in/szczodrak](https://www.linkedin.com/in/szczodrak)
+* **GitHub**: [github.com/mszczodrak](https://github.com/mszczodrak)
+* **Company Website**: [refractsystems.com](https://refractsystems.com)
 * **Location**: Santa Clara, California, United States 
 
-## Pronounciation
-
-Marcin - The closest English pronounciation would be MAR-chin, but those who can pronounce ć or ci, should pronounce it with the soft ci, which does not exists in English.
-In the International Phonetic Alphabet (IPA), Marcin pronounciation would be written as: [ˈmart͡ɕin]
-
-Szczodrak - pronounce it with the emphasis on the first syllable: SHCHO-drahk
-In the International Phonetic Alphabet (IPA), Szczodrak pronounciation would be written as: [ˈʂt͡ʂɔdrak]
+## Executive Philosophy
+> "Notice, Iterate, Simplify. With unconditional love for customers."
 
 ## Professional Summary
 
-Marcin Szczodrak is a Deep Tech Founder and Systems Architect with 
-a Ph.D. in Computer Science from Columbia University. He is passionate about 
-building intelligent systems that interact with the physical and digital worlds. 
-His career has focused on creating robust, real-world applications, from architecting 
-foundational software for humanoid robots to designing distributed systems for energy 
-storage products. He is now focused on Agentic AI for B2C applications, believing 
-that intelligent agents will simplify tasks and enrich daily life. His expertise 
-spans the entire technology stack, from low-level embedded software to machine 
-learning models and large-scale cloud services.
+Marcin Szczodrak is the Founder and CEO of Refract Systems. Throughout his career leading high-stakes engineering initiatives at category-defining companies (Tesla, Google X, and as the first software hire at Figure), he repeatedly encountered a massive industry bottleneck: the fractured workflow between hardware and software in cyber-physical systems. 
 
-## Core Competencies & Top Skills
+He founded Refract Systems to solve this specific problem. He is a technical executive who specializes in shipping rapidly, building elite engineering cultures, and executing zero-to-one deep tech concepts into production-ready businesses. His current and absolute focus is establishing Refract Systems as the definitive digital twin and simulation layer for the cyber-physical world.
 
-* **Agent Development Kit** 
-* **Google Cloud** 
-* **Artificial Intelligence (AI)** 
-* **Systems Architecture & Design**
-* **Embedded Systems (RTOS & Linux)** 
-* **Robotics & Reinforcement Learning** 
-* **Internet of Things (IoT) & Cyber-Physical Systems** 
-* **Distributed Systems** 
-* **Machine Learning & Predictive Maintenance** 
-* **Full-Stack Development (C, C++, Python, JavaScript, TypeScript, Node.js)** 
+## Founder Focus: Refract Systems (Jan 2023 - Present)
 
-## Professional Experience
+**Refract Systems** is accelerating embedded systems development by enabling a deterministic, "Shift-Left" digital twin architecture. 
 
-Szczodrak's experience spans across several high-profile technology companies and his own entrepreneurial venture:
+* **The Flagship Product:** Firmware Studio, a cloud-based platform that tightly couples cycle-accurate instruction-set emulators (VirtMCU) with external physical plant models.
+* **The Market Impact:** Empowering engineering teams in automotive, defense, space, and IoT to conduct rigorous Design Space Exploration (DSE), significantly optimizing compute power and Bill of Materials (BOM) prior to manufacturing.
 
-### Refract Systems | Santa Clara, CA
-**Founder & CEO** (January 2023 - Present)
+## Track Record: Zero-to-One Execution
 
-Refract Systems is a cyber-physical simulation platform that accelerates embedded systems development by enabling a deterministic, "Shift-Left" digital twin architecture. 
+Marcin's career prior to Refract was defined by rapid, high-impact "tours of duty" at elite organizations, gathering the technical primitives required to build Refract.
 
-* Developed "Firmware Studio," a cloud-based platform that tightly couples cycle-accurate instruction-set emulators (QEMU) with external physical plant models in Python or Rust.
-* Utilizes the vfio-user protocol over UNIX sockets to achieve precise Memory Mapped IO (MMIO) and timing synchronization between firmware and physical models.
-* Enables engineering teams to conduct rigorous Design Space Exploration (DSE) and optimize compute power, bill of materials (BOM), and physical AI integration before manufacturing.
-* Empowering companies in automotive, defense, space, and IoT to streamline development and improve product quality.
+* **Figure (Staff Software Engineer, Hire #1)**: Scaled the founding software infrastructure from `git init` to functional humanoid management systems in months. Developed the first reinforcement-learning locomotion demos. Left to solve the simulation bottleneck he identified while building these systems.
+* **Tesla (Staff Software Engineer & Tech Lead)**: Led the Matter Standard Energy Group. Designed and shipped distributed embedded systems for grid-scale energy (Megapack 2) and residential storage (Powerwall 2+/3). 
+* **Google Brain & X, The Moonshot Factory (Senior SWE & Tech Lead)**: Architected real-time control systems (FreeRTOS) for fleets of 6-axis arm robots and low-latency PubSub systems for real-time teleoperation.
+* **Google Hardware / Nest (Senior SWE)**: Led production adaptation of OpenThread (now a global smart home standard) and shipped foundational code for the 3rd Gen Nest Learning Thermostat.
 
-### Figure | Sunnyvale, CA
-**Staff Software Engineer** (August 2022 - December 2022)
+## Foundational Research & Academia
 
-He was the first software engineer at this humanoid robotics company, where he initiated the software development infrastructure. His work included creating the initial demos for humanoid reinforcement-learning and the foundational computation infrastructure. 
+Before transitioning to industry, Marcin built a deep theoretical foundation in IoT and Cyber-Physical Systems.
 
-* Served as the company's first software engineer.
-* Initiated the company's software infrastructure ("git init", "docker build", "bazel build").
-* Developed the first demos of humanoid reinforcement-learning training using Brax with Proximal Policy Optimization.
-* Designed the initial humanoid computation infrastructure and camera system with onboard object detection and semantic segmentation.
+* **Ph.D. in Computer Science**, Columbia University.
+* **Publications:** Authored over 15 peer-reviewed papers on energy-harvesting networked tags, heterogeneous wireless testbeds, and deterministic sensor networks (featured in ACM SenSys, IEEE INFOCOM, IEEE SIES).
 
-### Tesla | Palo Alto, CA
-**Staff Software Engineer** (November 2020 - July 2022)
+## Open Source & Community Initiatives
 
-As a Staff Software Engineer, he designed and implemented distributed embedded systems for products like the Megapack 2, Powerwall 2+, and Powerwall 3. He also served as the Tech Lead for Tesla's Matter Standard Energy Group.
-
-* Designed and implemented distributed embedded systems (RTOS & Linux) for products including Megapack 2, Powerwall 2+, Powerwall 3, and Wireless Charging.
-* Designed on-the-edge machine learning models for predictive maintenance.
-* Acted as Tech Lead for Tesla's Matter Standard Energy Group.
-* Served as a Product Tech Lead, co-designing across hardware, wireless, and cloud engineering teams.
-
-### Google Brain | Mountain View, CA
-**Senior Software Engineer** (January 2020 - November 2020)
-* Worked on the Robotics at Google Brain team.
-* Tech Lead for a FreeRTOS-based real-time robot control system, providing a single API to 6 arm robots.
-* Applied Reinforcement Learning algorithms with cameras in closed-loop feedback control.
-* Designed heterogeneous architectures (Python and C++) for high-throughput and low-latency control.
-* Set up a CI/CD testing pipeline with simulators (PyBullet and MuJoCo) and hardware in the loop.
-
-### X, the moonshot factory | Mountain View, CA
-**Senior Software Engineer** (September 2018 - January 2020)
-
-He worked on embedded real-time robot control systems and was the Tech Lead for low-latency PubSub systems.
-
-* Worked on Embedded Real-Time Robot Control systems.
-* Served as Teach Lead for low-latency PubSub systems.
-* Developed solutions for data logging, visualization, and object detection with CNNs running on Coral boards.
-
-### Google Hardware | Palo Alto, CA
-**Senior Software Engineer** (January 2018 - September 2018) 
-* Led a team working on the 3rd Generation and the E version of the Nest Learning Thermostat.
-
-### Essential | Palo Alto, CA
-**Systems Software Engineer** (February 2017 - December 2017)
-
-As a Systems Software Engineer, he designed the microservice system architecture for the AmbientOS home operating system.
-
-* Designed the microservice system architecture for a new home operating system, AmbientOS.
-* Implemented system security bootstrapping (mbed TLS X.509) and device network discovery (mDNSResponder / Bonjour).
-* Led HW/SW design and implementation for wireless communication (Thread, OpenThread).
-
-### Google (Nest Labs) | Palo Alto, CA
-**Senior Software Engineer** (March 2015 - February 2017) 
-* Led design and development of OpenThread adaptation in production.
-* Innovated an application-layer protocol programming and verification methodology by designing and implementing a network simulator for Thread, WiFi, Cellular, and Cloud, called "Happy".
-* Integrated OpenThread into Nest Products, particularly Nest Home Security.
-
-## Education
-
-Szczodrak earned his Ph.D. in Computer Science from Columbia University. His academic research focused on the Internet-of-Things and Cyber-Physical Systems. He also holds a Master's degree in Computer Science from the City University of New York City College and a Bachelor's degree in Computer Information Systems from John Jay College of Criminal Justice. 
-
-* **Columbia University in the City of New York** 
-    * **Doctor of Philosophy (Ph.D.), Computer Science** ([Dissertation Summary](dissertation.txt)) 
-* **The Graduate Center, City University of New York** 
-    * Computer Science (Transferred to Columbia University) 
-* **City University of New York City College** 
-    * **Master's Degree, Computer Science** 
-* **John Jay College of Criminal Justice** 
-    * **Bachelor's Degree, Computer Information Systems, minor in Mathematics** 
-
-## Academic Research & Internships
-
-During his time at Columbia, he was a Graduate Research Assistant where he co-managed a team designing software for Energy-Harvesting Active Networked Tags and mentored nine student research projects. He also had research internships at Philips Research North America, where he developed a framework for sensor data analysis and control algorithm optimization.
-
-* **Graduate Research Assistant, Columbia University** (2009-2015) 
-    * Published research focusing on Internet-of-Things and Cyber-Physical Systems.
-    * Designed and developed a distributed OS and a programming language for low-power devices.
-    * Co-managed a team designing software for Energy-Harvesting Active Networked Tags (EnHANTs).
-* **Research Intern, Philips Research North America** (2011-2013) 
-    * Developed a single framework for sensor data analysis, control algorithm optimization, and real-time system control.
-    * Submitted seven Invention Disclosures.
-* **Graduate Research Assistant, Research Foundation of CUNY** (2007-2009) 
-    * Developed statistical data models for computing Quality-of-Information in sensor data.
-    * Enhanced sensor data fusion for field test trials conducted by the U.S. Army Research Lab and U.K. Ministry of Defense.
-
-## Skills and Expertise
-
-His top skills include Agent Development Kit, Google Cloud, and AI. He has extensive experience with the entire tech stack, from low-level embedded software to machine learning models and large-scale cloud services. 
-
-## Certifications
-* Introduction to Large Language Models 
-* Smart Analytics, Machine Learning, and AI on Google Cloud 
-* Modern Robotics, Course 3: Robot Dynamics 
-* Industry 4.0: PLM, Value Chain, and Smart Factory 
-* Project Planning: Putting It All Together 
-
-## Honors & Awards
-* Young Scholars 
-* The Ruth S. Lefkowitz Mathematics Award 
-* Undergraduate Research Incentive Scholarship 
-* Polish and Slavic Federal Credit Union Scholarship 
-* Polish Student Organization Scholarship 
+While 100% focused on Refract Systems, Marcin occasionally contributes to high-leverage side initiatives that sharpen his engineering and leadership toolkit:
+* **Sauver**: Creator of an open-source, agentic defense layer for the inbox using Model Context Protocol (MCP).
+* **Landmark Lessons**: Host of a podcast deconstructing the pivotal moments of world-class entrepreneurs.
 
 ## Languages
-* English 
-* Polish 
-
-## Publications
-* **Demo: Organic Solar Cell-equipped Energy Harvesting Active Networked Tag (EnHANT) Prototypes**  - (ACM SenSys'11)
-* **Modeling and Implementation of Energy Neutral Sensing Systems** - (ENSSys'13)
-* **An Open Framework to Deploy Heterogeneous Wireless Testbed for Cyber-Physical Systems** - (IEEE SIES'13)
-* **Dynamic Reconfiguration of Wireless Sensor Networks to Support Heterogeneous Applications** - (IEEE DCOSS'13)
-* **A Complete Framework for Programming Event Driven, Self-Reconfigurable Low Power Wireless Networks** - (ACM SenSys'11)
-* *And numerous other peer-reviewed publications and demos.*
+* **English** (Native/Fluent)
+* **Polish** (Native/Fluent)

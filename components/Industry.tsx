@@ -67,11 +67,10 @@ const Industry = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-zinc-900">
-            Industry Experience
+            Track Record
           </h2>
           <p className="text-zinc-500 mt-4 max-w-2xl text-lg font-light">
-            A track record of building impactful software and hardware solutions
-            at leading technology companies.
+            A history of zero-to-one execution and scaling critical systems at category-defining companies.
           </p>
         </div>
 
