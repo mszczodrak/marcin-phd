@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden bg-zinc-50 pt-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/50 via-zinc-50 to-zinc-50" />
+    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden bg-transparent pt-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent" />
 
       <div className="relative z-10 container px-6 md:px-12 lg:px-24 mx-auto flex flex-col items-start justify-center">
         <div className="max-w-4xl space-y-8">

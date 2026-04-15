@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Orbitron, Roboto, Space_Mono } from "next/font/google";
 import FirebaseAnalyticsInit from "@/components/FirebaseAnalyticsInit";
+import ScientificBackground from "@/components/ScientificBackground";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "@/app/globals.css";
@@ -80,6 +81,7 @@ export default function RootLayout({
         className={`${orbitron.variable} ${roboto.variable} ${spaceMono.variable} font-sans antialiased`}
       >
         <FirebaseAnalyticsInit />
+        <ScientificBackground />
         <Navbar />
         {children}
         <Footer />

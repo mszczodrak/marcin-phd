@@ -36,7 +36,7 @@ const PastProjects = () => {
   return (
     <section
       id="past-projects"
-      className="bg-zinc-50 text-zinc-900 py-24 border-t border-zinc-100"
+      className="bg-transparent text-zinc-900 py-24 border-t border-zinc-100/50"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-16">
@@ -57,7 +57,7 @@ const PastProjects = () => {
               rel="noopener noreferrer"
               className="group block no-underline"
             >
-              <Card className="h-full bg-white border border-zinc-200 shadow-sm hover:shadow-md hover:border-zinc-300 transition-all duration-300 rounded-2xl overflow-hidden">
+              <Card className="h-full bg-white/80 backdrop-blur-sm border border-zinc-200 shadow-sm hover:shadow-md hover:border-zinc-300 transition-all duration-300 rounded-2xl overflow-hidden">
                 <CardContent className="p-8 flex flex-col h-full">
                   <div className="mb-6 relative w-12 h-12 rounded-xl overflow-hidden shadow-sm border border-zinc-100 bg-zinc-50 flex items-center justify-center">
                     <Image

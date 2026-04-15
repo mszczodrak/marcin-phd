@@ -48,7 +48,7 @@ const Academia = () => {
               href={project.link || "#"}
               className={`group block h-full no-underline ${!project.link ? "pointer-events-none" : ""}`}
             >
-              <Card className="h-full bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-md transition-all duration-300 rounded-2xl overflow-hidden shadow-sm">
+              <Card className="h-full bg-white/80 backdrop-blur-sm border-zinc-200 hover:border-zinc-300 hover:shadow-md transition-all duration-300 rounded-2xl overflow-hidden shadow-sm">
                 <CardContent className="p-6">
                   <div className="bg-zinc-50 p-2 rounded-xl mb-6 aspect-video relative overflow-hidden border border-zinc-100">
                     <Image

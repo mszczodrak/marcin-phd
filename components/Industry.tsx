@@ -62,7 +62,7 @@ const Industry = () => {
   return (
     <section
       id="industry"
-      className="bg-white text-zinc-900 py-24 border-t border-zinc-100"
+      className="bg-transparent text-zinc-900 py-24 border-t border-zinc-100/50"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-16">
@@ -121,3 +121,4 @@ const Industry = () => {
 };
 
 export default Industry;
+ Industry;

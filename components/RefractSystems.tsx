@@ -88,7 +88,7 @@ const RefractSystems = () => {
               rel="noopener noreferrer"
               className="group block no-underline"
             >
-              <Card className="bg-white border border-zinc-200 shadow-sm group-hover:shadow-md transition-shadow duration-300 rounded-2xl overflow-hidden">
+              <Card className="bg-white/80 backdrop-blur-sm border border-zinc-200 shadow-sm group-hover:shadow-md transition-shadow duration-300 rounded-2xl overflow-hidden">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-2 gap-8 items-stretch h-full min-h-[400px]">
                     <div
