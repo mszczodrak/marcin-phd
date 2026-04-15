@@ -10,12 +10,6 @@ export interface Feature {
 
 const features: Feature[] = [
   {
-    title: "Refract Systems",
-    description:
-      "A cyber-physical simulation platform that accelerates embedded systems development through a deterministic 'Shift-Left' digital twin architecture for firmware execution.",
-    image: "/images/firmware_studio_visualization_small.avif",
-  },
-  {
     title: "Figure AI",
     description:
       "Started company's software development infrastructure from scratch and designed the first version of the Humanoid Management Systems.",

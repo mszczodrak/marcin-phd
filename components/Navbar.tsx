@@ -6,7 +6,9 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const links = [
+  { url: "/#refract-systems", label: "Refract Systems" },
   { url: "/#industry", label: "Industry" },
+  { url: "/#past-projects", label: "Previous Ventures" },
   { url: "/#academia", label: "Academia" },
   { url: "https://substack.com/@mszczodrak", label: "Blog" },
 ];
