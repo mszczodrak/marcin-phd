@@ -2,43 +2,61 @@
 
 import { useEffect, useRef } from 'react';
 
-// Plexus Settings
-const speed = 0.2;
-const colors = {
-  particle: 'rgba(113, 113, 122, 0.2)', // zinc-500 with low opacity
-  line: 'rgba(113, 113, 122, 0.08)',    // zinc-500 with very low opacity
-};
+// Matrix Settings
+const fontSize = 14;
+const characters = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズヅブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const speedRange = { min: 0.5, max: 1.2 };
+const opacityBase = 0.08;
 
-class Particle {
+class MatrixColumn {
   x: number;
   y: number;
-  vx: number;
-  vy: number;
-  size: number;
-
-  constructor(width: number, height: number) {
-    this.x = Math.random() * width;
-    this.y = Math.random() * height;
-    this.vx = (Math.random() - 0.5) * speed;
-    this.vy = (Math.random() - 0.5) * speed;
-    this.size = Math.random() * 1 + 0.5;
+  speed: number;
+  columnChars: string[] = [];
+  
+  constructor(x: number, canvasHeight: number) {
+    this.x = x;
+    this.y = Math.random() * canvasHeight;
+    this.speed = Math.random() * (speedRange.max - speedRange.min) + speedRange.min;
+    
+    // Pre-generate characters for this column to reduce flickering
+    for (let i = 0; i < 50; i++) {
+      this.columnChars.push(characters.charAt(Math.floor(Math.random() * characters.length)));
+    }
   }
 
-  update(width: number, height: number) {
-    this.x += this.vx;
-    this.y += this.vy;
+  update(canvasHeight: number) {
+    this.y += this.speed;
+    if (this.y > canvasHeight + fontSize * 20) {
+      this.y = -fontSize * 20;
+      this.speed = Math.random() * (speedRange.max - speedRange.min) + speedRange.min;
+    }
 
-    if (this.x < 0) this.x = width;
-    if (this.x > width) this.x = 0;
-    if (this.y < 0) this.y = height;
-    if (this.y > height) this.y = 0;
+    // Occasionally change a character in the pre-generated list
+    if (Math.random() > 0.95) {
+      const idx = Math.floor(Math.random() * this.columnChars.length);
+      this.columnChars[idx] = characters.charAt(Math.floor(Math.random() * characters.length));
+    }
   }
 
   draw(ctx: CanvasRenderingContext2D) {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = colors.particle;
-    ctx.fill();
+    const trailLength = 15;
+    for (let i = 0; i < trailLength; i++) {
+      const charY = this.y - i * fontSize;
+      if (charY < -fontSize || charY > ctx.canvas.height + fontSize) continue;
+
+      // The head character (i=0) is slightly more opaque
+      const opacity = i === 0 ? opacityBase * 2 : (1 - i / trailLength) * opacityBase;
+      
+      ctx.fillStyle = `rgba(113, 113, 122, ${opacity})`;
+      ctx.font = `${fontSize}px "Space Mono", monospace`;
+      
+      // Use the pre-generated character based on the y position
+      const charIdx = Math.floor(Math.abs(charY / fontSize)) % this.columnChars.length;
+      const char = this.columnChars[charIdx];
+      
+      ctx.fillText(char, this.x, charY);
+    }
   }
 }
 
@@ -53,67 +71,28 @@ export default function ScientificBackground() {
     if (!ctx) return;
 
     let animationFrameId: number;
-    let particles: Particle[] = [];
-
-    // Subtle Grid Settings
-    const gridSize = 50;
-    const gridColor = 'rgba(212, 212, 216, 0.15)'; // zinc-300 with very low opacity
-
-    const connectionDistance = 200;
+    let columns: MatrixColumn[] = [];
 
     const init = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      particles = [];
-      const densityCount = Math.floor((canvas.width * canvas.height) / 25000); 
-      const finalCount = Math.min(Math.max(densityCount, 20), 80);
-
-      for (let i = 0; i < finalCount; i++) {
-        particles.push(new Particle(canvas.width, canvas.height));
+      
+      const columnCount = Math.floor(canvas.width / (fontSize * 1.5));
+      columns = [];
+      for (let i = 0; i < columnCount; i++) {
+        // Sparse: only fill ~25% of possible columns
+        if (Math.random() > 0.75) {
+          columns.push(new MatrixColumn(i * fontSize * 1.5, canvas.height));
+        }
       }
-    };
-
-    const drawGrid = () => {
-      ctx.beginPath();
-      ctx.strokeStyle = gridColor;
-      ctx.lineWidth = 0.5;
-
-      for (let x = 0; x <= canvas.width; x += gridSize) {
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-      }
-
-      for (let y = 0; y <= canvas.height; y += gridSize) {
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-      }
-      ctx.stroke();
     };
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      drawGrid();
-
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update(canvas.width, canvas.height);
-        particles[i].draw(ctx);
-
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < connectionDistance) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            const opacity = (1 - distance / connectionDistance) * 0.15;
-            ctx.strokeStyle = `rgba(113, 113, 122, ${opacity})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
+      for (let i = 0; i < columns.length; i++) {
+        columns[i].update(canvas.height);
+        columns[i].draw(ctx);
       }
 
       animationFrameId = requestAnimationFrame(animate);
