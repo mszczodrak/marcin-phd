@@ -12,32 +12,16 @@ interface Product {
 
 const products: Product[] = [
   {
-    title: "Firmware Studio",
-    description:
-      "A comprehensive digital twin platform that integrates Virtmcu with physics engines and cloud-based CI/CD for accelerated firmware development.",
-    link: "https://firmware.studio",
-    logo: "/images/firmware_studio_logo.avif",
-    visual: (
-      <Image
-        src="/images/firmware_studio_visualization.avif"
-        alt="Firmware Studio Visualization"
-        fill
-        sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-      />
-    ),
-  },
-  {
     title: "VirtMCU",
     description:
       "A high-performance simulation engine enabling deterministic execution of embedded platforms with native speed.",
     link: "https://virtmcu.com",
     logo: "/images/virtmcu_logo.svg",
     visual: (
-      <AnimatedTerminal 
-        sequence={TERMINAL_SEQUENCE} 
-        title="virtmcu — simulation-log" 
-        className="w-full h-full flex flex-col border-none rounded-none shadow-none text-xs" 
+      <AnimatedTerminal
+        sequence={TERMINAL_SEQUENCE}
+        title="virtmcu — simulation-log"
+        className="w-full h-full flex flex-col border-none rounded-none shadow-none text-xs"
       />
     ),
   },
@@ -53,10 +37,10 @@ const RefractSystems = () => {
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <Image 
-                src="/images/firmware_studio_logo.avif" 
-                alt="Refract Systems" 
-                width={48} 
+              <Image
+                src="/images/firmware_studio_logo.avif"
+                alt="Refract Systems"
+                width={48}
                 height={48}
                 className="rounded-lg"
               />
@@ -68,23 +52,23 @@ const RefractSystems = () => {
               Building the future of cyber-physical systems development through high-fidelity digital twins and deterministic simulation.
             </p>
           </div>
-          <a 
-            href="https://refractsystems.com" 
-            target="_blank" 
+          <a
+            href="https://refractsystems.com"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-zinc-600 transition-colors font-light text-sm flex items-center gap-1"
           >
-            Visit refractsystems.com 
+            Visit refractsystems.com
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
 
         <div className="grid gap-12">
           {products.map((product, index) => (
-            <a 
-              key={index} 
-              href={product.link} 
-              target="_blank" 
+            <a
+              key={index}
+              href={product.link}
+              target="_blank"
               rel="noopener noreferrer"
               className="group block no-underline"
             >
